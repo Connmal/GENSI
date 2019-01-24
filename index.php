@@ -2528,16 +2528,15 @@
               .attr("y", text_offset_top + 40)
               .text("Click \"Next\" to end the survey.")
               .call(wrap, textWidth);
-           document.getElementById('motivationText').style.display = "block";
+           document.getElementById('silde9').style.display = "block";
 
     // Release window close-prevention
         currSlide++;
-        showNext();
+
         }
         } else if (currSlide == 47) {
 
-            document.getElementById('motivationText').style.display = "none";
-            document.getElementById("slide9").style.display = "block";
+            document.getElementById("slide9").style.display = "none";
             unhook();
           }
 
