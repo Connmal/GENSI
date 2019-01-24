@@ -1,0 +1,622 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*!
+ * Bootstrap v2.3.2
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world by @mdo and @fat.
+ */
+
+ #example_picture {
+  position: absolute;
+  z-index: 1000;
+ }
+
+ #example_net {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+ }
+
+#before_pic {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+    z-index: 1000;
+
+}
+
+ #after_pic {
+  position: absolute;
+  top: 400px;
+  left: 40px;
+    z-index: 1000;
+
+ }
+
+ .pic {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+ }
+
+.slideText {
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.questionText {
+  font-weight: 200;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.node_text {
+  font-weight: 250;
+  font-size: 16px;
+  stroke: none;
+  fill: #111;
+}
+
+.node {
+  fill: #9CD4D4;
+  stroke: #999;
+  stroke-width: 2px;
+}
+
+.link {
+  stroke: #AAA;
+  stroke-width: 4px;
+}
+
+.you_node {
+  background-color: blue;
+}
+
+#mf_box {
+  fill: none;
+  stroke: #999;
+}
+
+#gender {
+  position: absolute;
+  display: none;
+}
+
+#nederlands {
+  position: absolute;
+  display: none;
+}
+
+#exit {
+  position: absolute;
+  display: none;
+}
+
+#yesOrNo {
+  position: absolute;
+  display: none;
+}
+
+#maleOrFemale {
+  position: absolute;
+  display: none;
+}
+
+#talkFrequency {
+  position: absolute;
+  display: none;
+}
+
+#friendEducation {
+  position: absolute;
+  display: none;
+}
+
+#friendReligion {
+  position: absolute;
+  display: none;
+}
+
+#age {
+  position: absolute;
+  display: none;
+}
+
+#userEd {
+  position: absolute;
+  display: none;
+}
+
+#areHisp {
+  position: absolute;
+  display: none;
+}
+
+#race {
+  position: absolute;
+  display: none;
+}
+
+#friendRace {
+  position: absolute;
+  display: none;
+}
+
+#relat {
+  position: absolute;
+  display: none;
+}
+
+.input-group {
+  max-width:800px;
+}
+
+.no-wrap {
+  white-space:nowrap;
+}
+
+#name_input {
+  display: none;
+  position: absolute;
+  top: 280px;
+  left: 35%;
+}
+#code_input{
+  position: absolute;
+  display: none;
+}
+#age_input{
+  position: absolute;
+  display: none;
+}
+
+#gender_input{
+  position: absolute;
+  display: none;
+}
+
+#socialselfesteem1{
+  position: absolute;
+  display: none;
+}
+
+#socialselfesteem2 {
+  position: absolute;
+  display: none;
+}
+#socialselfesteem3 {
+  position: absolute;
+  display: none;
+}
+#socialselfesteem4 {
+  position: absolute;
+  display: none;
+}
+#socialboldness1 {
+  position: absolute;
+  display: none;
+}
+#socialboldness2 {
+  position: absolute;
+  display: none;
+}
+#socialboldness3 {
+  position: absolute;
+  display: none;
+}
+#socialboldness4 {
+  position: absolute;
+  display: none;
+}
+#sociability1 {
+  position: absolute;
+  display: none;
+}
+#sociability2 {
+  position: absolute;
+  display: none;
+}
+#sociability3 {
+  position: absolute;
+  display: none;
+}
+#sociability4 {
+  position: absolute;
+  display: none;
+}
+#liveliness1 {
+  position: absolute;
+  display: none;
+}
+#liveliness2 {
+  position: absolute;
+  display: none;
+}
+#liveliness3 {
+  position: absolute;
+  display: none;
+}
+#liveliness4 {
+  position: absolute;
+  display: none;
+}
+#loneliness1 {
+  position: absolute;
+  display: none;
+}
+#loneliness2 {
+  position: absolute;
+  display: none;
+}
+#loneliness3 {
+  position: absolute;
+  display: none;
+}
+#loneliness4 {
+  position: absolute;
+  display: none;
+}
+#loneliness5 {
+  position: absolute;
+  display: none;
+}
+#loneliness6 {
+  position: absolute;
+  display: none;
+}
+#loneliness7 {
+  position: absolute;
+  display: none;
+}
+#loneliness8 {
+  position: absolute;
+  display: none;
+}
+#loneliness9 {
+  position: absolute;
+  display: none;
+}
+#loneliness10 {
+  position: absolute;
+  display: none;
+}
+#loneliness11 {
+  position: absolute;
+  display: none;
+}
+#loneliness12 {
+  position: absolute;
+  display: none;
+}
+#loneliness13 {
+  position: absolute;
+  display: none;
+}
+#loneliness14 {
+  position: absolute;
+  display: none;
+}
+#loneliness15 {
+  position: absolute;
+  display: none;
+}
+#loneliness16 {
+  position: absolute;
+  display: none;
+}
+#loneliness17 {
+  position: absolute;
+  display: none;
+}
+#loneliness18 {
+  position: absolute;
+  display: none;
+}
+#loneliness19 {
+  position: absolute;
+  display: none;
+}
+#loneliness20 {
+  position: absolute;
+  display: none;
+}
+
+#userLiberal {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  width:800px;
+}
+
+.slider-label {
+  text-align:center;
+}
+
+.slider-left {
+  float:left;
+}
+
+.slider-right {
+  float:right;
+}
+
+.d3-slider-handle {
+  background: linear-gradient(to bottom, #CCC 0%, #DDD 100%) repeat scroll 0% 0% transparent !important;
+}
+
+.degrees {
+  font-family: 'monospace';
+}
+
+#userEnjoy {
+  position: absolute;
+  display: none;
+}
+
+#userLikelihood {
+  position: absolute;
+  display: none;
+}
+
+#userExhaust {
+  position: absolute;
+  display: none;
+}
+
+#userMotivation {
+  position: absolute;
+  display: none;
+}
+
+#motivationText {
+
+}
+
+#timeBar {
+  z-index: 10;
+}
+
+.bar_target {
+  fill: #EEE;
+  stroke: #999;
+  stroke-width: 1px;
+  opacity: .7;
+}
+
+.bar_label {
+  fill: #E6E6E6;
+  stroke: #999;
+  stroke-width: 1px;
+  opacity: .7;
+}
+
+.bar_text {
+  stroke: none;
+  fill: #555;
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.backdrop {
+  fill: #E6E6E6;
+  stroke: #999;
+  stroke-width: 1px;
+  opacity: .7;
+}
+
+#qbox {
+  position: absolute;
+}
+
+.q_window {
+  stroke: #999;
+  stroke-width: 2px;
+  fill: none;
+  z-index: 100;
+}
+
+#nextDiv {
+  position: absolute;
+}
+#codenonresponse_box {
+  display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1000; /* high z-index */
+    background: #000; /* fallback */
+    background: rgba(0,0,0,0.25);
+}
+#nonresponse_box {
+  display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1000; /* high z-index */
+    background: #000; /* fallback */
+    background: rgba(0,0,0,0.25);
+}
+
+#onlyone_box {
+  display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1000; /* high z-index */
+    background: #000; /* fallback */
+    background: rgba(0,0,0,0.25);
+}
+
+#fewFriends_box {
+  display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1000; /* high z-index */
+    background: #000; /* fallback */
+    background: rgba(0,0,0,0.25);
+}
+
+
+#badYear_box {
+  display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1000; /* high z-index */
+    background: #000; /* fallback */
+    background: rgba(0,0,0,0.25);
+}
+
+#fewDragged_box {
+  display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1000; /* high z-index */
+    background: #000; /* fallback */
+    background: rgba(0,0,0,0.25);
+}
+
+#popup {
+  display: none;
+  background: #fff;
+  padding: 1%;
+  width: 40%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
+  cursor: default;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.9);
+}
+
+#onlyOnePopup {
+  display: none;
+  background: #fff;
+  padding: 1%;
+  width: 40%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
+  cursor: default;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.9);
+}
+
+#yearPopup {
+  display: none;
+  background: #fff;
+  padding: 1%;
+  width: 40%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
+  cursor: default;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.9);
+}
+
+#friendPopup {
+  display: none;
+  background: #fff;
+  padding: 1%;
+  width: 40%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
+  cursor: default;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.9);
+}
+
+#dragPopup {
+  display: none;
+  background: #fff;
+  padding: 1%;
+  width: 40%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
+  cursor: default;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.9);
+}
+
+
+ .close-btn {
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    }
+    .close-btn:hover {
+      background: #05abe0;
+    }
+
+
+.popup_text {
+  color: red;
+  font-weight: bold;
+}
+
+#Next {
+  display: box;
+  position: absolute;
+  top: 460px;
+  left: 80%;
+}
+
+#submitForm {
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0px;
+  left:0px;
+  display:none
+}
+
+#submitForm form {
+  height:100%;
+}
+
+#submitButton {
+  position: absolute;
+  top: 460px;
+  left: 80%;
+}
