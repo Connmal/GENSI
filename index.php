@@ -2532,8 +2532,10 @@
 
     // Release window close-prevention
         currSlide++;
+        showNext();
         }
         } else if (currSlide == 47) {
+
             document.getElementById('motivationText').style.display = "none";
             document.getElementById("slide9").style.display = "block";
             unhook();
