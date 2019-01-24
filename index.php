@@ -2532,6 +2532,7 @@
 
     // Release window close-prevention
         currSlide++;
+        showNext();
         }
         } else if (currSlide == 47) {
             document.getElementById('slide8').style.display = "none";
