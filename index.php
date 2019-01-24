@@ -2530,11 +2530,12 @@
               .call(wrap, textWidth);
 
 
-
-            // Release window close-prevention
+    // Release window close-prevention
+        currSlide++;
         }
         } else if (currSlide == 47) {
-            document.getElementById("slide9").style.display = "none";
+            document.getElementById('slide8').style.display = "none";
+            document.getElementById("slide9").style.display = "block";
             unhook();
           }
 
