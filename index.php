@@ -2528,7 +2528,7 @@
               .attr("y", text_offset_top + 40)
               .text("Click \"Next\" to end the survey.")
               .call(wrap, textWidth);
-
+           document.getElementById('motivationText').style.display = "block";
 
     // Release window close-prevention
         currSlide++;
