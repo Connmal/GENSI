@@ -332,6 +332,25 @@
         .text("We will now ask a some questions about yourself. Please click \"Next\" after answering each question to continue.")
         .call(wrap, textWidth)
 
+        var slide_9= d3.select("svg").append("g")
+          .attr("id", "slide9")
+          .style("display", "none")
+        slide_9.append("rect")
+          .style("fill", "white")
+          .attr("class", "slide")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", bodyWidth)
+          .attr("height", bodyHeight)
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - (textWidth / 2))
+          .attr("y", text_offset_top)
+          .text("Thank you for participating, you may close this broswer window.")
+          .call(wrap, textWidth)
+
+
+
 
 
       // Boxes indicating frequency into which nodes are dragged (4, 5 or 6 categories)
@@ -2510,10 +2529,16 @@
               .text("Thank you for participating in this study. Click \"Next\" to end the survey.")
               .call(wrap, textWidth);
 
+
+
             // Release window close-prevention
-          }
-            unhook();
         }
+        } else if (currSlide == 47) {
+            document.getElementById("slide9").style.display = "none";
+            unhook();
+          }
+
+
         $('#Next').blur();
       }
 
