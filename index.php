@@ -2526,7 +2526,7 @@
               .attr("id", "motivationText")
               .attr("x", center - (textWidth / 2) + 50)
               .attr("y", text_offset_top + 40)
-              .text("Thank you for participating in this study. Click \"Next\" to end the survey.")
+              .text("Click \"Next\" to end the survey.")
               .call(wrap, textWidth);
 
 
@@ -2535,7 +2535,7 @@
         showNext();
         }
         } else if (currSlide == 47) {
-            document.getElementById('slide8').style.display = "none";
+            document.getElementById('motivationText').style.display = "none";
             document.getElementById("slide9").style.display = "block";
             unhook();
           }
