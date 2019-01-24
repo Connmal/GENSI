@@ -2532,7 +2532,6 @@
 
     // Release window close-prevention
         currSlide++;
-        showNext();
         }
         } else if (currSlide == 47) {
             document.getElementById('motivationText').style.display = "none";
