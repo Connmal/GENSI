@@ -2526,7 +2526,7 @@
               .attr("id", "motivationText")
               .attr("x", center - (textWidth / 2) + 50)
               .attr("y", text_offset_top + 40)
-              .text("Click \"Next\" to end the survey.")
+              .text("Click \"Submit\" to end the survey.")
               .call(wrap, textWidth);
 
 
@@ -2534,6 +2534,7 @@
             showNext();
           }
         } else if (currSlide == 47) {
+              document.getElementById("motivationText").style.display = "none";
               document.getElementById("slide9").style.display = "block";
 
 // Release window close-prevention
@@ -3016,7 +3017,7 @@
         <input type="hidden" name="<?php echo $_POST['statusvarname1']; ?>" value="<?php echo $_POST['statusvarvalue1']; ?>"/>
         <input type="hidden" name="<?php echo $_POST['varname1']; ?>" id="qu1_id" value=""/>
         <input type="hidden" id="nomem" name="nomem" value="<?php echo $_POST['nomem']; ?>"/>
-        <input name="<?php echo $_POST['nextvarname']; ?>" id="submitButton" class="btn btn-default" type="submit" value="Next"/>
+        <input name="<?php echo $_POST['nextvarname']; ?>" id="submitButton" class="btn btn-default" type="submit" value="Sumbit"/>
       </form>
     </div>
 
