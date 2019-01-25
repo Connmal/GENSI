@@ -332,21 +332,24 @@
         .text("We will now ask a some questions about yourself. Please click \"Next\" after answering each question to continue.")
         .call(wrap, textWidth)
 
-        var slide_9= d3.select("svg").append("g")
-          .attr("id", "slide9")
+        var slide_9 = d3.select("svg").append("g")
+          .attr("id", "slide9");
         slide_9.append("rect")
           .style("fill", "white")
           .attr("class", "slide")
           .attr("x", 0)
           .attr("y", 0)
           .attr("width", bodyWidth)
-          .attr("height", bodyHeight)
+          .attr("height", bodyHeight);
         slide_9.append("text")
-          .attr("class", "slideText")
+          .attr("class", "slideText numfri")
           .attr("x", center - (textWidth / 2))
           .attr("y", text_offset_top)
           .text("Thank you for participating, you may close this broswer window.")
-          .call(wrap, textWidth)
+          .call(wrap, textWidth);
+        slide_9.style("display", "none");
+
+
 
 
 
