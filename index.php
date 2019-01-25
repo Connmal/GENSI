@@ -349,13 +349,24 @@
           .call(wrap, textWidth);
         slide_9.style("display", "none");
 
-        var motivationText = d3.select("svg").append("text")
-          .attr("class", "slideText")
-          .attr("id", "motivationText")
-          .attr("x", center - (textWidth / 2) + 50)
-          .attr("y", text_offset_top + 40)
+
+        var motivationText = d3.select("svg").append("g")
+          .attr("id", "motivationText");
+        motivationText.append("rect")
+          .style("fill", "white")
+          .attr("class", "slide")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", bodyWidth)
+          .attr("height", bodyHeight);
+        motivationText.append("text")
+          .attr("class", "slideText numfri")
+          .attr("x", center - (textWidth / 2))
+          .attr("y", text_offset_top)
           .text("Click \"Submit\" to end the survey.")
           .call(wrap, textWidth);
+        motivationText.style("display", "none");
+
 
 
 
