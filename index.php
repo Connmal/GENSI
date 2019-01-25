@@ -334,7 +334,6 @@
 
         var slide_9= d3.select("svg").append("g")
           .attr("id", "slide9")
-          .style("display", "none")
         slide_9.append("rect")
           .style("fill", "white")
           .attr("class", "slide")
