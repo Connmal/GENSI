@@ -2531,6 +2531,7 @@
               document.getElementById('silde9').style.display = "none";
 
             currSlide++;
+            showNext();
           }
         } else if (currSlide == 47) {
               document.getElementById("slide9").style.display = "none";
