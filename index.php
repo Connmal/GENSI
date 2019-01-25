@@ -2528,13 +2528,13 @@
               .attr("y", text_offset_top + 40)
               .text("Click \"Next\" to end the survey.")
               .call(wrap, textWidth);
-              
+
 
             currSlide++;
             showNext();
           }
         } else if (currSlide == 47) {
-              document.getElementById("slide9").style.display = "none";
+              document.getElementById("slide9").style.display = "block";
 
 // Release window close-prevention
 
