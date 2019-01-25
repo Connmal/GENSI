@@ -2391,7 +2391,13 @@
           checked = false;
 
           document.getElementById("loneliness20").style.display = "none";
+}
+  currSlide++;
+  showNext();
+} else if (currSlide == 47) {
 
+          document.getElementById("NextDiv").style.display = "none";
+          documnt.getElementById("submitForm").style.display = "block";
           checked = true;
 
 
@@ -2500,9 +2506,8 @@
             var sf = document.getElementById("submitForm");
             var sb = document.getElementById("submitButton");
             var nd = document.getElementById("NextDiv");
-            sf.style.display = "block";
-            nd.style.display = "none";
-            sb.style.display = "block";
+
+
             var motivationText = d3.select("svg").append("text")
               .attr("class", "slideText")
               .attr("id", "motivationText")
@@ -2512,11 +2517,12 @@
               .call(wrap, textWidth);
 
             // Release window close-prevention
-          }
             unhook();
+          }
+          $('#Next').blur();
         }
-        $('#Next').blur();
-      }
+
+
 
       // Detect Internet Explorer
       var ie = (function(){
