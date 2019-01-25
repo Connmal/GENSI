@@ -349,6 +349,13 @@
           .call(wrap, textWidth);
         slide_9.style("display", "none");
 
+        var motivationText = d3.select("svg").append("text")
+          .attr("class", "slideText")
+          .attr("id", "motivationText")
+          .attr("x", center - (textWidth / 2) + 50)
+          .attr("y", text_offset_top + 40)
+          .text("Click \"Submit\" to end the survey.")
+          .call(wrap, textWidth);
 
 
 
@@ -2515,20 +2522,12 @@
 
             checked = false
             lo20.style.display = "none";
-
+            document.getElementById("motivationText").style.display = "block";
             var sf = document.getElementById("submitForm");
             var sb = document.getElementById("submitButton");
             var nd = document.getElementById("NextDiv");
             sf.style.display = "block";
             nd.style.display = "none";
-            var motivationText = d3.select("svg").append("text")
-              .attr("class", "slideText")
-              .attr("id", "motivationText")
-              .attr("x", center - (textWidth / 2) + 50)
-              .attr("y", text_offset_top + 40)
-              .text("Click \"Submit\" to end the survey.")
-              .call(wrap, textWidth);
-                document.getElementById("motivationText").style.display = "block";
 
             currSlide++;
             showNext();
