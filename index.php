@@ -2397,7 +2397,7 @@
 } else if (currSlide == 47) {
 
           document.getElementById("NextDiv").style.display = "none";
-          documnt.getElementById("submitForm").style.display = "block";
+          document.getElementById("submitForm").style.display = "block";
           checked = true;
 
 
