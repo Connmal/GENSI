@@ -2526,7 +2526,7 @@
               .attr("y", text_offset_top + 40)
               .text("Click \"Next\" to end the survey.")
               .call(wrap, textWidth);
-              document.getElementById('silde9').style.display = "block";
+              document.getElementById('silde9').style.display = "none";
 
             currSlide++;
           }
