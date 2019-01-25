@@ -2392,12 +2392,15 @@
 
           document.getElementById("loneliness20").style.display = "none";
 }
-  currSlide++;
-  showNext();
-} else if (currSlide == 47) {
-
           document.getElementById("NextDiv").style.display = "none";
           document.getElementById("submitForm").style.display = "block";
+
+          currSlide++;
+          showNext();
+
+       } else if (currSlide == 47) {
+
+
           checked = true;
 
 
