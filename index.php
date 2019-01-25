@@ -2501,7 +2501,7 @@
             });
 
             checked = false
-            lo20.style.display = "none";
+
 
             var sf = document.getElementById("submitForm");
             var sb = document.getElementById("submitButton");
