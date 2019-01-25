@@ -2391,15 +2391,6 @@
           checked = false;
 
           document.getElementById("loneliness20").style.display = "none";
-}
-          document.getElementById("NextDiv").style.display = "none";
-          document.getElementById("submitForm").style.display = "block";
-
-          currSlide++;
-          showNext();
-
-       } else if (currSlide == 47) {
-
 
           checked = true;
 
@@ -2504,28 +2495,27 @@
             });
 
             checked = false
-
+            lo20.style.display = "none";
 
             var sf = document.getElementById("submitForm");
             var sb = document.getElementById("submitButton");
             var nd = document.getElementById("NextDiv");
-
-
+            sf.style.display = "block";
+            nd.style.display = "none";
             var motivationText = d3.select("svg").append("text")
               .attr("class", "slideText")
               .attr("id", "motivationText")
               .attr("x", center - (textWidth / 2) + 50)
               .attr("y", text_offset_top + 40)
-              .text("Thank you for participating in this study. Click \"Next\" to end the survey.")
+              .text("Click \"Next\" to end the survey.")
               .call(wrap, textWidth);
 
             // Release window close-prevention
-            unhook();
           }
-          $('#Next').blur();
+            unhook();
         }
-
-
+        $('#Next').blur();
+      }
 
       // Detect Internet Explorer
       var ie = (function(){
