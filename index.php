@@ -2428,6 +2428,17 @@
           checked = false;
 
           document.getElementById("loneliness20").style.display = "none";
+          currSlide++;
+          showNext();
+        }
+        } else if (currSlide == 47) {
+          lo20.style.display = "none";
+          document.getElementById("motivationText").style.display = "block";
+          var sf = document.getElementById("submitForm");
+          var sb = document.getElementById("submitButton");
+          var nd = document.getElementById("NextDiv");
+          sf.style.display = "block";
+          nd.style.display = "none";
 
           checked = true;
 
@@ -2532,18 +2543,18 @@
             });
 
             checked = false
-            lo20.style.display = "none";
-            document.getElementById("motivationText").style.display = "block";
-            var sf = document.getElementById("submitForm");
-            var sb = document.getElementById("submitButton");
-            var nd = document.getElementById("NextDiv");
-            sf.style.display = "block";
-            nd.style.display = "none";
+
+
+
 
             currSlide++;
             showNext();
-          }
-        } else if (currSlide == 47) {
+
+        } else if (currSlide == 48) {
+              document.getElementById("submitForm").style.display = "none";
+              document.getElementById("submitButton").style.display = "none";
+              document.getElementById("Next").style.position="none";
+
               document.getElementById("motivationText").style.display = "none";
               document.getElementById("slide9").style.display = "block";
 
@@ -2553,7 +2564,9 @@
         }
 
         $('#Next').blur();
+
       }
+
 
       // Detect Internet Explorer
       var ie = (function(){
