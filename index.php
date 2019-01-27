@@ -170,7 +170,7 @@
           .attr("class", "slideText")
           .attr("x", center - textWidth / 2)
           .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
-          .text("Completing this survey takes 10 to 15 minutes. Please make sure to not leave the page before all questions have been answered.")
+          .text("Completing this survey takes 10 to 15 minutes. Please make sure you read the questions carefully and do not leave the page before all questions have been answered.")
           .call(wrap, textWidth);
       }
 
