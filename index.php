@@ -2432,7 +2432,6 @@
           showNext();
         }
         } else if (currSlide == 47) {
-          lo20.style.display = "none";
           document.getElementById("motivationText").style.display = "block";
           var sf = document.getElementById("submitForm");
           var sb = document.getElementById("submitButton");
