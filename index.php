@@ -959,10 +959,10 @@
                   console.log("source: " + sourceIndex);
                 }
               });
-              nodes[sourceIndex].friendsWith += targetIndex.toString();
-              nodes[targetIndex].friendsWith += sourceIndex.toString();
-              (friendsWith + '').split('')
-              
+              nodes[sourceIndex].friendsWith += targetIndex.toString().split('');
+              nodes[targetIndex].friendsWith += sourceIndex.toString().split('');
+
+
               links.push({source: sourceIndex, target: targetIndex});
             }
             selected = false;
