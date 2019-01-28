@@ -962,12 +962,9 @@
             friendtarget =  nodes[sourceIndex].friendsWith += targetIndex.toString();
             friendsource =  nodes[targetIndex].friendsWith += sourceIndex.toString();
 
-              for (var i = 0, len = friendtarget.length; i < len; i += 1) {
-    output.push(+friendtarget.charAt(i));
-}
-for (var i = 0, len = friendsource.length; i < len; i += 1) {
-output.push(+friendsource.charAt(i));
-}
+              for (var i = 0, len = friendtarget.length; i < len; i += 1)
+
+for (var i = 0, len = friendsource.length; i < len; i += 1)
 
               links.push({source: sourceIndex, target: targetIndex});
             }
