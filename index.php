@@ -60,7 +60,7 @@
           boxbar_offset_y = bodyHeight - bar_target_height - 100;
 
       var currSlide = 1;
-      var numFriends = 0;
+      var numFriends = 0.;
       var askedAbout = 0;
       var numAsked = 1;
       var lastAnswered = 0;
@@ -831,13 +831,13 @@
 
         } else if (friendName.value.length > 0) {
 
-          if (numFriends == 0) {
+          if (numFriends == 0.) {
 
             document.getElementById("first_friend_text").style.display = "none";
             document.getElementById("second_friend_text").style.display = "block";
           }
 
-          if (numFriends == 14) {
+          if (numFriends == 14.) {
             document.getElementById("second_friend_text").style.display = "none";
             document.getElementById("final_friend_text").style.display = "block";
             document.getElementById("one_at_a_time").style.display = "none";
@@ -847,7 +847,7 @@
 
           numFriends++;
 
-          if (numFriends <= 15) {
+          if (numFriends <= 15.) {
             var node = {name: friendName.value,
                         id: numFriends,
                         gender:"",
@@ -1206,7 +1206,7 @@
 
           currSlide++;
         } else if (currSlide == 6) {
-          if (numFriends < 15 && checked == false) {
+          if (numFriends < 15. && checked == false) {
             checked = true;
             console.log("fewer than 15 friends")
             friendPromptNonresponse();
@@ -1216,7 +1216,7 @@
             document.getElementById("slide5").style.display = "block";
             var text = $("#slide5 .numfri").text();
             text = text.replace('personen', 'persoon');
-            if (numFriends < 2) $("#slide5 .numfri").text(text);
+            if (numFriends < 2.) $("#slide5 .numfri").text(text);
 
             document.getElementById("name_input").style.display = "none";
             currSlide++;
@@ -1238,11 +1238,11 @@
 
           var text = $("#slide6 .numfri1").text();
           text = text.replace('each person', 'each person');
-          if (numFriends < 2) $("#slide6 .numfri1").text(text);
+          if (numFriends < 2.) $("#slide6 .numfri1").text(text);
 
           var text = $("#slide6 .numfri2").text();
           text = text.replace('elke', 'de');
-          if (numFriends < 2) $("#slide6 .numfri2").text(text);
+          if (numFriends < 2.) $("#slide6 .numfri2").text(text);
 
           d3.selectAll(".node").attr("display", "block");
           d3.selectAll(".node").attr("opacity", function(d) { return d.index == 0 ? .4 : 1 });
@@ -1325,7 +1325,7 @@
 
             currSlide++;
 
-            if (numFriends < 2) {
+            if (numFriends < 2.) {
               showNext();
             }
           }
