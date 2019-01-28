@@ -964,9 +964,9 @@
 
               for (var i = 0, len = targetIndex.length; i < len; i += 1)
 
-for (var i = 0, len = sourceIndex.length; i < len; i += 1)
+              for (var i = 0, len = sourceIndex.length; i < len; i += 1)
 
-              links.push({source: sourceIndex, target: targetIndex});
+              links.push({source: sourceIndex.charAt(i), target: targetIndex.charAt(i)});
             }
             selected = false;
           }
