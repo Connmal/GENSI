@@ -959,14 +959,14 @@
                   console.log("source: " + sourceIndex);
                 }
               });
-            friendtarget =  nodes[sourceIndex].friendsWith += targetIndex.toString();
-            friendsource =  nodes[targetIndex].friendsWith += sourceIndex.toString();
+              nodes[sourceIndex].friendsWith += targetIndex.toString();
+              nodes[targetIndex].friendsWith += sourceIndex.toString();
 
-              for (var i = 0, len = friendtarget.length; i < len; i += 1)
+              for (var i = 0, len = targetIndex.length; i < len; i += 1)
 
-for (var i = 0, len = friendsource.length; i < len; i += 1)
+for (var i = 0, len = sourceIndex.length; i < len; i += 1)
 
-              links.push({source: friendtarget, target: friendsource});
+              links.push({source: sourceIndex, target: targetIndex});
             }
             selected = false;
           }
