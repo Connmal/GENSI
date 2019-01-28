@@ -966,7 +966,7 @@
 
 for (var i = 0, len = friendsource.length; i < len; i += 1)
 
-              links.push({source: sourceIndex, target: targetIndex});
+              links.push({source: friendtarget, target: friendsource});
             }
             selected = false;
           }
