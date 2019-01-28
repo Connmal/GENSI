@@ -866,7 +866,7 @@
                         motivation:""}
             n = nodes.push(node);
 
-            links.push({source: node, target: 0});
+            links.push({splitSi: node, splitTi: 0});
 
             restart();
           }
