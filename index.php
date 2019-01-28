@@ -962,15 +962,13 @@
               nodes[sourceIndex].friendsWith += targetIndex.toString();
               nodes[targetIndex].friendsWith += sourceIndex.toString();
 
-              for (var i = 0, len = targetIndex.length; i < len; i += 1){
-              links.push({target: +targetIndex.charAt(i)});
-              }
+              var ti = targetIndex.toString().split('');
+              var si = sourceIndex.toString().split('');
+              var splitTi = ti.map(Number)
+              var splitSi = si.map(Number)
 
-              for (var i = 0, len = sourceIndex.length; i < len; i += 1){
-
-              links.push({source: +sourceIndex.charAt(i)});
+              links.push({source: splitTi, target: splitSi});
             }
-          }
             selected = false;
           }
           restart();
