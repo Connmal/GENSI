@@ -960,8 +960,8 @@
                 }
               });
 
-              nodes[sourceIndex].friendsWith += targetIndex.toString().split('');
-              nodes[targetIndex].friendsWith += sourceIndex.toString().split('');
+              (nodes[sourceIndex].friendsWith += targetIndex.toString()+ '').split('');
+              (nodes[targetIndex].friendsWith += sourceIndex.toString()+ '').split('');
 
 
               links.push({source: sourceIndex, target: targetIndex});
