@@ -80,7 +80,6 @@
       var svg = d3.select("body").append("svg")
         .attr("width", bodyWidth)
         .attr("height", bodyHeight)
-        .attr("overflow", "scroll")
         .on("contextmenu", function() {d3.event.preventDefault()});
 
       var force = d3.layout.force()
@@ -126,7 +125,7 @@
           .style("fill", "white")
           .attr("x", 0)
           .attr("y", 0)
-          .attr("width", bodyWidth)
+          .attr("width", 2500)
           .attr("height", bodyHeight);
         slide_0.append("text")
           .attr("class", "lead")
