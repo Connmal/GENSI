@@ -964,7 +964,7 @@
               nodes[targetIndex].friendsWith += sourceIndex.toString();
 
 
-              links.push({source: (sourceIndex+ '').split(''), target: (targetIndex+ '').split('')});
+              links.push({source: sourceIndex, target: targetIndex});
             }
             selected = false;
           }
