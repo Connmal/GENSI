@@ -180,7 +180,7 @@
         .style("fill", "white")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", bodywidthslide1)
+        .attr("width", bodywidthslide)
         .attr("height", bodyHeight);
       slide_1.append("text")
         .attr("class", "lead")
