@@ -175,7 +175,7 @@
 
       }
       var slide_1 = d3.select("svg").append("g")
-        .attr("id", "slide0");
+        .attr("id", "slide1");
       slide_1.append("rect")
         .style("fill", "white")
         .attr("x", 0)
@@ -1144,7 +1144,7 @@
 
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "none";
-
+          document.getElementById("slide1").style.display = "block";
 
           currSlide+= .5;
 
