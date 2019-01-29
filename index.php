@@ -1144,7 +1144,7 @@
 
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "none";
-          document.getElementById("slide1").style.display = "block";
+          document.getElementById("slide1").style.display = "none";
 
           cuurSlide+= .5;
 
