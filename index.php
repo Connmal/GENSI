@@ -379,7 +379,19 @@
       .attr("class", "slideText")
       .attr("x", center - textWidth / 2)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 154)
-      .text("Researcher email: connor.malcolm@northumbria.ac.uk. Supervisor email: thomas.pollet@northumbria.ac.uk. Name and contact details of the Data Protection Officer at Northumbria University: Duncan James (dp.officer@northumbria.ac.uk). ")
+      .text("Researcher email: connor.malcolm@northumbria.ac.uk.")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 156)
+      .text("Supervisor email: thomas.pollet@northumbria.ac.uk.")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 158)
+      .text("Name and contact details of the Data Protection Officer at Northumbria University: Duncan James (dp.officer@northumbria.ac.uk).")
       .call(wrap, textWidth);
       slide_1.style("display", "none");
 
