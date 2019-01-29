@@ -959,15 +959,12 @@
                   console.log("source: " + sourceIndex);
                 }
               });
-              nodes[sourceIndex].friendsWith += targetIndex.toString();
-              nodes[targetIndex].friendsWith += sourceIndex.toString();
 
-              var ti = nodes[sourceIndex].friendsWith += targetIndex.toString().split('');
-              var si = nodes[targetIndex].friendsWith += sourceIndex.toString().split('');
-              var splitTi = ti.map(Number)
-              var splitSi = si.map(Number)
+              nodes[sourceIndex].friendsWith += targetIndex.toString().split('');
+              nodes[targetIndex].friendsWith += sourceIndex.toString().split('');
 
-              links.push({source: splitTi, target: splitSi});
+
+              links.push({source: sourceIndex, target: targetIndex});
             }
             selected = false;
           }
