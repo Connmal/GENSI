@@ -196,7 +196,7 @@
       slide_1.append("text")
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
-        .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 2)
         .text("Participant Information.")
         .call(wrap, textWidth);
       slide_1.append("text")
@@ -1326,14 +1326,14 @@
 
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "none";
-          document.getElementById("slide1").style.display = "block";
+
 
           currSlide+= .5;
 
  } else if (currSlide == 1.5) {
 
-          document.getElementById("slide1").style.display = "none";
-          document.getElementById("slide0").style.display = "none";
+          document.getElementById("slide1").style.display = "block";
+
 
           var ex = document.getElementById("code_input");
           ex.style.left = string_l + "px";
