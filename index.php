@@ -1144,9 +1144,9 @@
 
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "none";
-          
 
-          cuurSlide+= .5;
+
+          currSlide+= .5;
 
  } else if (currSlide == 1.5) {
 
