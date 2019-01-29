@@ -22,8 +22,8 @@
       function unhook() {
         hook=false;
       }
-      var bodywidthslide1 = $(document).width();
-      if (bodywidthslide1< 2500) bodywidthslide1 = 2500);
+      var bodywidthslide = $(document).width();
+      if (bodywidthslide < 2500) bodywidthslide1 = 2500);
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
