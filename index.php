@@ -84,29 +84,7 @@
         .attr("height", bodyHeight)
         .on("contextmenu", function() {d3.event.preventDefault()});
 
-      var force = d3.layout.force()
-        .size([bodyWidth, bodyHeight])
-        .nodes([{x:bodyWidth / 2,
-                  y:bodyHeight / 2.2,
-                  fixed: true,
-                  name:"You",
-                  id:0,
-                  gender:"",
-                  age:"",
-                  code:"",
-                  race:"",
-                  religion:"",
-                  surveyTime:0,
-                  sawStats:false,
-                  edu:null,
-                  freq:null,
-                  enjoy:"",
-                  like:"",
-                  interest:"",
-                  motivation:""}]) // initialize with a single node
-        .linkDistance(100)
-        .charge(-1500)
-        .on("tick", tick);
+      
 
       var nodes = force.nodes(),
           links = force.links(),
@@ -180,7 +158,7 @@
         .style("fill", "white")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", bodywidthslide)
+        .attr("width", bodyWidth)
         .attr("height", bodyHeight);
       slide_1.append("text")
         .attr("class", "lead")
