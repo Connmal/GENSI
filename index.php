@@ -866,7 +866,7 @@
                         motivation:""}
             n = nodes.push(node);
 
-            links.push({splitSi: node, splitTi: 0});
+            links.push({source: node, target: 0});
 
             restart();
           }
@@ -962,8 +962,8 @@
               nodes[sourceIndex].friendsWith += targetIndex.toString();
               nodes[targetIndex].friendsWith += sourceIndex.toString();
 
-              var ti = targetIndex.toString().split('');
-              var si = sourceIndex.toString().split('');
+              var ti = nodes[sourceIndex].friendsWith += targetIndex.toString().split('');
+              var si = nodes[targetIndex].friendsWith += sourceIndex.toString().split('');
               var splitTi = ti.map(Number)
               var splitSi = si.map(Number)
 
