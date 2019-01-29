@@ -200,7 +200,7 @@
         .attr("id", "one_at_a_time")
         .attr("x", center - (textWidth / 2))
         .attr("y", text_offset_top + lineHeight * ($('#slide4 .slideText tspan').length + $('#slide4 .slideText').length-1))
-        .text("You can name up to 15 people with whom you discuss important matters. CLICK ON THEIR NAMES TO TOGGLE GENDER.")
+        .text("You can name up to 10 people with whom you discuss important matters. CLICK ON THEIR NAMES TO TOGGLE GENDER. Pink is female and teal is male.")
         .call(wrap, textWidth);
       var textheight = $('#slide4 .slideText tspan').length + $('#slide4 .slideText').length;
       slide_4.append("text")
@@ -837,7 +837,7 @@
             document.getElementById("second_friend_text").style.display = "block";
           }
 
-          if (numFriends == 14) {
+          if (numFriends == 9) {
             document.getElementById("second_friend_text").style.display = "none";
             document.getElementById("final_friend_text").style.display = "block";
             document.getElementById("one_at_a_time").style.display = "none";
@@ -847,7 +847,7 @@
 
           numFriends++;
 
-          if (numFriends <= 15) {
+          if (numFriends <= 10) {
             var node = {name: friendName.value,
                         id: numFriends,
                         gender:"",
@@ -1209,9 +1209,9 @@
 
           currSlide++;
         } else if (currSlide == 6) {
-          if (numFriends < 15 && checked == false) {
+          if (numFriends < 10 && checked == false) {
             checked = true;
-            console.log("fewer than 15 friends")
+            console.log("fewer than 10 friends")
             friendPromptNonresponse();
           } else {
             checked = false;
@@ -2446,7 +2446,7 @@
 
 
             // Single array containing all answers
-            var answer = [document.getElementById("nomem").value,nodes[0].code,nodes[0].age,nodes[0].q1,(nodes.length > 1) ? nodes[1].name : "", (nodes.length > 1) ? nodes[1].q2 : "",(nodes.length > 1) ? nodes[1].friendsWith : "",(nodes.length > 2) ? nodes[2].name : "",(nodes.length > 2) ? nodes[2].q2 : "",(nodes.length > 2) ? nodes[2].friendsWith : "",(nodes.length > 3) ? nodes[3].name : "",(nodes.length > 3) ? nodes[3].q2 : "",(nodes.length > 3) ? nodes[3].friendsWith : "",(nodes.length > 4) ? nodes[4].name : "",(nodes.length > 4) ? nodes[4].q2 : "",(nodes.length > 4) ? nodes[4].friendsWith : "",(nodes.length > 5) ? nodes[5].name : "",(nodes.length > 5) ? nodes[5].q2 : "",(nodes.length > 5) ? nodes[5].friendsWith : "",(nodes.length > 6) ? nodes[6].name : "",(nodes.length > 6) ? nodes[6].q2 : "",(nodes.length > 6) ? nodes[6].friendsWith : "",(nodes.length > 7) ? nodes[7].name : "",(nodes.length > 7) ? nodes[7].q2 : "",(nodes.length > 7) ? nodes[7].friendsWith : "",(nodes.length > 8) ? nodes[8].name : "",(nodes.length > 8) ? nodes[8].q2 : "",(nodes.length > 8) ? nodes[8].friendsWith : "",(nodes.length > 9) ? nodes[9].name : "",(nodes.length > 9) ? nodes[9].q2 : "",(nodes.length > 9) ? nodes[9].friendsWith : "",(nodes.length > 10) ? nodes[10].name : "",(nodes.length > 10) ? nodes[10].q2 : "",(nodes.length > 10) ? nodes[10].friendsWith : "",(nodes.length > 11) ? nodes[11].name : "",(nodes.length > 11) ? nodes[11].q2 : "",(nodes.length > 11) ? nodes[11].friendsWith : "",(nodes.length > 12) ? nodes[12].name : "",(nodes.length > 12) ? nodes[12].q2 : "",(nodes.length > 12) ? nodes[12].friendsWith : "",(nodes.length > 13) ? nodes[13].name : "",(nodes.length > 13) ? nodes[13].q2 : "",(nodes.length > 13) ? nodes[13].friendsWith : "",(nodes.length > 14) ? nodes[14].name : "",(nodes.length > 14) ? nodes[14].q2 : "",(nodes.length > 14) ? nodes[14].friendsWith : "",(nodes.length > 15) ? nodes[15].name : "",(nodes.length > 15) ? nodes[15].q2 : "",(nodes.length>15)?nodes[15].friendsWith:"",nodes[0].q5,nodes[0].q6,nodes[0].q7,nodes[0].q8,nodes[0].q9,nodes[0].q10,nodes[0].q11,nodes[0].q12,nodes[0].q13,nodes[0].q14,nodes[0].q15,nodes[0].q16,nodes[0].q17,nodes[0].q18,nodes[0].q19,nodes[0].q20,nodes[0].q21,nodes[0].q22,nodes[0].q23,nodes[0].q24,nodes[0].q25,nodes[0].q26,nodes[0].q27,nodes[0].q28,nodes[0].q29,nodes[0].q30,nodes[0].q31,nodes[0].q32,nodes[0].q33,nodes[0].q34,nodes[0].q35,nodes[0].q36,nodes[0].q37,nodes[0].q38,nodes[0].q39,nodes[0].q40];
+            var answer = [document.getElementById("nomem").value,nodes[0].code,nodes[0].age,nodes[0].q1,(nodes.length > 1) ? nodes[1].name : "", (nodes.length > 1) ? nodes[1].q2 : "",(nodes.length > 1) ? nodes[1].friendsWith : "",(nodes.length > 2) ? nodes[2].name : "",(nodes.length > 2) ? nodes[2].q2 : "",(nodes.length > 2) ? nodes[2].friendsWith : "",(nodes.length > 3) ? nodes[3].name : "",(nodes.length > 3) ? nodes[3].q2 : "",(nodes.length > 3) ? nodes[3].friendsWith : "",(nodes.length > 4) ? nodes[4].name : "",(nodes.length > 4) ? nodes[4].q2 : "",(nodes.length > 4) ? nodes[4].friendsWith : "",(nodes.length > 5) ? nodes[5].name : "",(nodes.length > 5) ? nodes[5].q2 : "",(nodes.length > 5) ? nodes[5].friendsWith : "",(nodes.length > 6) ? nodes[6].name : "",(nodes.length > 6) ? nodes[6].q2 : "",(nodes.length > 6) ? nodes[6].friendsWith : "",(nodes.length > 7) ? nodes[7].name : "",(nodes.length > 7) ? nodes[7].q2 : "",(nodes.length > 7) ? nodes[7].friendsWith : "",(nodes.length > 8) ? nodes[8].name : "",(nodes.length > 8) ? nodes[8].q2 : "",(nodes.length > 8) ? nodes[8].friendsWith : "",(nodes.length > 9) ? nodes[9].name : "",(nodes.length > 9) ? nodes[9].q2 : "",(nodes.length > 9) ? nodes[9].friendsWith : "",(nodes.length > 10) ? nodes[10].name : "",(nodes.length > 10) ? nodes[10].q2 : "",(nodes.length > 10) ? nodes[10].friendsWith : "",nodes[0].q5,nodes[0].q6,nodes[0].q7,nodes[0].q8,nodes[0].q9,nodes[0].q10,nodes[0].q11,nodes[0].q12,nodes[0].q13,nodes[0].q14,nodes[0].q15,nodes[0].q16,nodes[0].q17,nodes[0].q18,nodes[0].q19,nodes[0].q20,nodes[0].q21,nodes[0].q22,nodes[0].q23,nodes[0].q24,nodes[0].q25,nodes[0].q26,nodes[0].q27,nodes[0].q28,nodes[0].q29,nodes[0].q30,nodes[0].q31,nodes[0].q32,nodes[0].q33,nodes[0].q34,nodes[0].q35,nodes[0].q36,nodes[0].q37,nodes[0].q38,nodes[0].q39,nodes[0].q40];
 
   console.log(answer)
 
@@ -2490,22 +2490,7 @@
             q4_9: (nodes.length > 9) ? nodes[9].friendsWith : "",
             q2_10: (nodes.length > 10) ? nodes[10].name : "",
             q3_10: (nodes.length > 10) ? nodes[10].q2 : "",
-            q4_10: (nodes.length > 10) ? nodes[10].friendsWith : "",
-            q2_11: (nodes.length > 11) ? nodes[11].name : "",
-            q3_11: (nodes.length > 11) ? nodes[11].q2 : "",
-            q4_11: (nodes.length > 11) ? nodes[11].friendsWith : "",
-            q2_12: (nodes.length > 12) ? nodes[12].name : "",
-            q3_12: (nodes.length > 12) ? nodes[12].q2 : "",
-            q4_12: (nodes.length > 12) ? nodes[12].friendsWith : "",
-            q2_13: (nodes.length > 13) ? nodes[13].name : "",
-            q3_13: (nodes.length > 13) ? nodes[13].q2 : "",
-            q4_13: (nodes.length > 13) ? nodes[13].friendsWith : "",
-            q2_14: (nodes.length > 14) ? nodes[14].name : "",
-            q3_14: (nodes.length > 14) ? nodes[14].q2 : "",
-            q4_14: (nodes.length > 14) ? nodes[14].friendsWith : "",
-            q2_15: (nodes.length > 15) ? nodes[15].name : "",
-            q3_15: (nodes.length > 15) ? nodes[15].q2 : "",
-            q4_15: (nodes.length > 15) ? nodes[15].friendsWith : "",
+            q4_10: (nodes.length > 10) ? nodes[10].friendsWith : ""
             q5: nodes[0].q5,
             q6: nodes[0].q6,
             q7: nodes[0].q7,
