@@ -172,8 +172,7 @@
           .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
           .text("Completing this survey takes 10 to 15 minutes. Please make sure you read the questions carefully and to not leave the page before all questions have been answered.")
           .call(wrap, textWidth);
-
-      }
+        }
       var slide_1 = d3.select("svg").append("g")
         .attr("id", "slide1");
       slide_1.append("rect")
@@ -385,6 +384,7 @@
       .attr("y", text_offset_top + title_offset_top + lineHeight * 128)
       .text("Researcher email: connor.malcolm@northumbria.ac.uk. Supervisor email: thomas.pollet@northumbria.ac.uk. Name and contact details of the Data Protection Officer at Northumbria University: Duncan James (dp.officer@northumbria.ac.uk). ")
       .call(wrap, textWidth);
+      slide_1.style("display", "none");
 
 
 
@@ -1359,9 +1359,6 @@
        }}
 
 
-
-
-          
           document.getElementById("code_input").style.display = "none";
 
           var ex = document.getElementById("age_input");
