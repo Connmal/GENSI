@@ -208,19 +208,19 @@
       slide_1.append("text")
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
-        .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
         .text("What is the purpose of this study?")
         .call(wrap, textWidth);
       slide_1.append("text")
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
-        .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 12)
         .text("The aim of this research is to understand how extroversion-introversion and loneliness are associated with network layer size and emotional closeness to network members.")
         .call(wrap, textWidth);
       slide_1.append("text")
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
-        .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 16)
         .text("Why have I been invited?")
        .call(wrap, textWidth);
      slide_1.append("text")
