@@ -960,11 +960,11 @@
                 }
               });
 
-              (nodes[sourceIndex].friendsWith += targetIndex.toString()+ '').split('');
-              (nodes[targetIndex].friendsWith += sourceIndex.toString()+ '').split('');
+              (nodes[sourceIndex].friendsWith += targetIndex.toString();
+              (nodes[targetIndex].friendsWith += sourceIndex.toString();
 
 
-              links.push({source: sourceIndex, target: targetIndex});
+              links.push({source: (sourceIndex+ '').split('');, target: (targetIndex+ '').split('');});
             }
             selected = false;
           }
