@@ -22,11 +22,12 @@
       function unhook() {
         hook=false;
       }
-
+      var bodywidthslide1 = $(document).width();
+      if (bodywidthslide1< 2500) bodywidthslide1 = 2500);
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
-      if (bodyHeight < 2000) bodyHeight = 2000;
+      if (bodyHeight < 750) bodyHeight = 750;
       var center = bodyWidth / 2;
       var middle = bodyHeight / 200;
 
@@ -179,7 +180,7 @@
         .style("fill", "white")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", bodyWidth)
+        .attr("width", bodywidthslide1)
         .attr("height", bodyHeight);
       slide_1.append("text")
         .attr("class", "lead")
