@@ -1325,14 +1325,14 @@
           startTime = d.getTime();
 
           document.getElementById("Next").style.position="absolute";
-
-           document.getElementById("slide0").style.display = "none";
+          document.getElementById("slide0").style.display = "none";
+           document.getElementById("slide1").style.display = "block";
           currSlide+= .5;
-          showNext();
+
 
 
  } else if (currSlide == 1.5) {
-          document.getElementById("slide1").style.display = "block";
+          document.getElementById("slide1").style.display = "none";
 
 
           var ex = document.getElementById("code_input");
@@ -1340,7 +1340,7 @@
           ex.style.top = string_t;
           ex.style.display = "block";
 
-          document.getElementById("slide1").style.display = "none";
+
           currSlide+= .5;
 
 
