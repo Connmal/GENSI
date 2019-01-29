@@ -22,6 +22,8 @@
       function unhook() {
         hook=false;
       }
+      var bodywidthslide = $(document).width();
+      if  (bodywidthslide <2500) bodywidthslide = 2500;
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
@@ -178,7 +180,7 @@
         .style("fill", "white")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", "2500")
+        .attr("width", "bodywidthslide" )
         .attr("height", bodyHeight);
       slide_1.append("text")
         .attr("class", "lead")
