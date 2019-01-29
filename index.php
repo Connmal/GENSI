@@ -183,7 +183,7 @@
         .attr("x", 0)
         .attr("y", 0)
         .attr("width", bodyWidth )
-        .attr("height", bodyheightslide);
+        .attr("height", "bodyheightslide");
       slide_1.append("text")
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
