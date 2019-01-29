@@ -203,7 +203,7 @@
         .call(wrap, textWidth);
       slide_1.append("text")
         .attr("class", "slideText")
-        .attr("x", center - textWidth / 3)
+        .attr("x", center - textWidth / 1)
         .attr("y", text_offset_top + title_offset_top + lineHeight * 12)
         .text("What is the purpose of this study?")
         .call(wrap, textWidth);
@@ -215,7 +215,7 @@
         .call(wrap, textWidth);
       slide_1.append("text")
         .attr("class", "slideText")
-        .attr("x", center - textWidth / 2)
+        .attr("x", center - textWidth / 1)
         .attr("y", text_offset_top + title_offset_top + lineHeight * 20)
         .text("Why have I been invited?")
        .call(wrap, textWidth);
@@ -227,7 +227,7 @@
         .call(wrap, textWidth);
       slide_1.append("text")
         .attr("class", "slideText")
-        .attr("x", center - textWidth / 2)
+        .attr("x", center - textWidth / 1)
         .attr("y", text_offset_top + title_offset_top + lineHeight * 28)
         .text("Do I have to take apart?")
        .call(wrap, textWidth);
@@ -239,7 +239,7 @@
        .call(wrap, textWidth);
       slide_1.append("text")
        .attr("class", "slideText")
-       .attr("x", center - textWidth / 2)
+       .attr("x", center - textWidth / 1)
        .attr("y", text_offset_top + title_offset_top + lineHeight * 40)
        .text("What will happen if I take part?")
        .call(wrap, textWidth);
@@ -251,7 +251,7 @@
       .call(wrap, textWidth);
      slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
+      .attr("x", center - textWidth / 1)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 50)
       .text("What are the possible disadvantages of taking part?")
       .call(wrap, textWidth);
@@ -263,7 +263,7 @@
      .call(wrap, textWidth);
      slide_1.append("text")
      .attr("class", "slideText")
-     .attr("x", center - textWidth / 2)
+     .attr("x", center - textWidth / 1)
      .attr("y", text_offset_top + title_offset_top + lineHeight * 62)
      .text("Will my taking part in this study be kept confidential and anonymous?")
      .call(wrap, textWidth);
@@ -275,7 +275,7 @@
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
+      .attr("x", center - textWidth / 1)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 72)
       .text("How will my data be stored, and how long will it be stored for?")
       .call(wrap, textWidth);
@@ -287,7 +287,7 @@
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
+      .attr("x", center - textWidth / 1)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 84)
       .text("What categories of personal data will be collected and processed in this study?")
       .call(wrap, textWidth);
@@ -299,7 +299,7 @@
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
+      .attr("x", center - textWidth / 1)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 92)
       .text("What is the legal basis for processing personal data?")
       .call(wrap, textWidth);
@@ -311,7 +311,7 @@
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
+      .attr("x", center - textWidth / 1)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 100)
       .text("Who are the recipients or categories of recipients of personal data, if any?")
       .call(wrap, textWidth);
@@ -323,7 +323,7 @@
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
+      .attr("x", center - textWidth / 1)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 108)
       .text("What will happen to the results of the study and could personal data collected be used in future research?")
       .call(wrap, textWidth);
@@ -335,7 +335,7 @@
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
+      .attr("x", center - textWidth / 1)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 120)
       .text("Who is Organizing and Funding the Study?")
       .call(wrap, textWidth);
@@ -347,7 +347,7 @@
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
+      .attr("x", center - textWidth / 1)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 128)
       .text("Who has reviewed this study?")
       .call(wrap, textWidth);
@@ -359,7 +359,7 @@
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
+      .attr("x", center - textWidth / 1)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 136)
       .text("What are my rights as a participant in this study?")
       .call(wrap, textWidth);
@@ -371,7 +371,7 @@
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
+      .attr("x", center - textWidth / 1)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 148)
       .text("Contact for further information")
       .call(wrap, textWidth);
