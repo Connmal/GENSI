@@ -1326,26 +1326,26 @@
 
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "none";
-
+          document.getElementById("slide1").style.display = "block";
 
           currSlide+= .5;
 
 
  } else if (currSlide == 1.5) {
 
-          document.getElementById("slide1").style.display = "block";
+          document.getElementById("slide1").style.display = "none";
 
 
           var ex = document.getElementById("code_input");
           ex.style.left = string_l + "px";
           ex.style.top = string_t;
           ex.style.display = "block";
-          currSlide++;
+          currSlide+= .5;
 
 
 
    } else if (currSlide == 2) {
-     document.getElementById("slide1").style.display = "none";
+
        document.getElementById("slide0").style.display = "none";
      if ($('input[name=code]').val().length == 0 && checked == false && !skipped) {
        promptNonresponse();
