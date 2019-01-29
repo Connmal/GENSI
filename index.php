@@ -372,7 +372,7 @@
       slide_1.append("text")
       .attr("class", "slideText")
       .attr("x", center - textWidth / 3)
-      .attr("y", text_offset_top + title_offset_top + lineHeight * 150)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 152)
       .text("Contact for further information")
       .call(wrap, textWidth);
       slide_1.append("text")
@@ -383,13 +383,13 @@
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 3)
+      .attr("x", center - textWidth / 2)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 156)
       .text("Supervisor email: thomas.pollet@northumbria.ac.uk.")
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
-      .attr("x", center - textWidth / 3)
+      .attr("x", center - textWidth / 2)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 158)
       .text("Name and contact details of the Data Protection Officer at Northumbria University: Duncan James (dp.officer@northumbria.ac.uk).")
       .call(wrap, textWidth);
