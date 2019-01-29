@@ -1329,7 +1329,7 @@
 
 
           currSlide+= .5;
-          showNext();
+
 
  } else if (currSlide == 1.5) {
 
@@ -1346,6 +1346,7 @@
 
    } else if (currSlide == 2) {
      document.getElementById("slide1").style.display = "none";
+       document.getElementById("slide0").style.display = "none";
      if ($('input[name=code]').val().length == 0 && checked == false && !skipped) {
        promptNonresponse();
        checked = true;
