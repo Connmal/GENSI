@@ -125,8 +125,8 @@
           .style("fill", "white")
           .attr("x", 0)
           .attr("y", 0)
-          .attr("width", "2500")
-          .attr("height", "800px");
+          .attr("width", bodyWidth)
+          .attr("height", bodyHeight);
         slide_0.append("text")
           .attr("class", "lead")
           .text("Your browser is not supported.")
@@ -178,7 +178,7 @@
         .style("fill", "white")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", bodyWidth)
+        .attr("width", "2500")
         .attr("height", bodyHeight);
       slide_1.append("text")
         .attr("class", "lead")
