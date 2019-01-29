@@ -22,6 +22,8 @@
       function unhook() {
         hook=false;
       }
+      var bodywidthslide = $(document).width();
+      if  (bodywidthslide <2500) bodywidthslide = 2500;
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
@@ -81,6 +83,11 @@
         .attr("width", bodyWidth)
         .attr("height", bodyHeight)
         .on("contextmenu", function() {d3.event.preventDefault()});
+
+     var svgtwo = d3.select("body").append("svgtwo")
+     .attr("width", bodywidthslide)
+     .attr("height", bodyHeight)
+     .on("contextmenu", function() {d3.event.preventDefault()});
 
       var force = d3.layout.force()
         .size([bodyWidth, bodyHeight])
@@ -172,13 +179,13 @@
           .text("Completing this survey takes 10 to 15 minutes. Please make sure you read the questions carefully and to not leave the page before all questions have been answered.")
           .call(wrap, textWidth);
         }
-      var slide_1 = d3.select("svg").append("g")
+      var slide_1 = d3.select("svgtwo").append("g")
         .attr("id", "slide1");
       slide_1.append("rect")
         .style("fill", "white")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", "2500" )
+        .attr("width", bodyWidth )
         .attr("height", bodyHeight);
       slide_1.append("text")
         .attr("class", "slideText")
