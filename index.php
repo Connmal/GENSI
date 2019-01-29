@@ -170,9 +170,41 @@
           .attr("class", "slideText")
           .attr("x", center - textWidth / 2)
           .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
-          .text("Completing this survey takes 10 to 15 minutes. Please make sure you read the questions carefulyy and to not leave the page before all questions have been answered.")
+          .text("Completing this survey takes 10 to 15 minutes. Please make sure you read the questions carefully and to not leave the page before all questions have been answered.")
           .call(wrap, textWidth);
+
       }
+      var slide_1 = d3.select("svg").append("g")
+        .attr("id", "slide0");
+      slide_1.append("rect")
+        .style("fill", "white")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", bodyWidth)
+        .attr("height", bodyHeight);
+      slide_1.append("text")
+        .attr("class", "lead")
+        .text("")
+        .attr("x", center - 170)
+        .attr("y", title_offset_top);
+      slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight)
+        .text("This is a survey about how social networks are influenced by extroversion and loneliness.")
+        .call(wrap, textWidth);
+      slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+        .text("It is not possible to move back to an earlier question.")
+        .call(wrap, textWidth);
+      slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
+        .text("Completing this survey takes 10 to 15 minutes. Please make sure you read the questions carefully and to not leave the page before all questions have been answered.")
+        .call(wrap, textWidth);
 
       var slide_4 = d3.select("svg").append("g")
         .attr("id", "slide4");
@@ -1112,7 +1144,14 @@
 
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "none";
+          document.getElementById("slide1").style.display = "block";
 
+          cuurSlide+= .5;
+
+ } else if (currSlide == 1.5) {
+
+          document.getElementById("slide1").style.display = "none";
+          document.getElementById("slide0").style.display = "none";
           var ex = document.getElementById("code_input");
           ex.style.left = string_l + "px";
           ex.style.top = string_t;
