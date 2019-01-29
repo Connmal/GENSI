@@ -330,7 +330,7 @@
       slide_1.append("text")
       .attr("class", "slideText")
       .attr("x", center - textWidth / 2)
-      .attr("y", text_offset_top + title_offset_top + lineHeight * 104
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 104)
       .text("The general findings might be reported in a scientific journal or presented at a research conference, however the data will be anonymized and you will not be personally identifiable. We can provide you with a summary of the findings from the study if you email the researcher at the address listed below. Anonymized data will be posted on the open science framework in order to comply with the norm of transparency in research. Researchers and academics will have access to this research data through the open science framework (http://osf.io). Should you not want your anonymized data to be shared, then please do not take part.")
       .call(wrap, textWidth);
       slide_1.append("text")
