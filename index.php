@@ -1144,7 +1144,7 @@
 
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "none";
-          document.getElementById("slide1").style.display = "none";
+          
 
           cuurSlide+= .5;
 
@@ -1152,6 +1152,7 @@
 
           document.getElementById("slide1").style.display = "none";
           document.getElementById("slide0").style.display = "none";
+
           var ex = document.getElementById("code_input");
           ex.style.left = string_l + "px";
           ex.style.top = string_t;
