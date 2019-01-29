@@ -1326,20 +1326,22 @@
 
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "none";
-          document.getElementById("slide1").style.display = "block";
+
 
           currSlide+= .5;
 
 
  } else if (currSlide == 1.5) {
 
-          document.getElementById("slide1").style.display = "none";
+          document.getElementById("slide1").style.display = "block";
 
 
           var ex = document.getElementById("code_input");
           ex.style.left = string_l + "px";
           ex.style.top = string_t;
           ex.style.display = "block";
+
+          document.getElementById("slide1").style.display = "none";
           currSlide+= .5;
 
 
