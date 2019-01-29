@@ -1327,12 +1327,11 @@
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "block";
 
-
+           document.getElementById("slide0").style.display = "none";
           currSlide+= .5;
 
 
  } else if (currSlide == 1.5) {
-          document.getElementById("slide0").style.display = "none";
           document.getElementById("slide1").style.display = "block";
 
 
