@@ -125,7 +125,7 @@
           .style("fill", "white")
           .attr("x", 0)
           .attr("y", 0)
-          .attr("width", 2500)
+          .attr("width", "2500")
           .attr("height", bodyHeight);
         slide_0.append("text")
           .attr("class", "lead")
