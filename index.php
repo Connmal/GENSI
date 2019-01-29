@@ -22,8 +22,8 @@
       function unhook() {
         hook=false;
       }
-      var bodywidthslide = $(document).width();
-      if  (bodywidthslide <2500) bodywidthslide = 2500;
+      var bodywidthslide = $(document).height();
+      if  (bodyheightslide <2500) bodyheightslide = 2500;
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
@@ -85,8 +85,8 @@
         .on("contextmenu", function() {d3.event.preventDefault()});
 
      var svgtwo = d3.select("body").append("svgtwo")
-     .attr("width", bodywidthslide)
-     .attr("height", bodyHeight)
+     .attr("width", bodyWidth)
+     .attr("height", bodyheightslide)
      .on("contextmenu", function() {d3.event.preventDefault()});
 
       var force = d3.layout.force()
@@ -186,7 +186,7 @@
         .attr("x", 0)
         .attr("y", 0)
         .attr("width", bodyWidth )
-        .attr("height", bodyHeight);
+        .attr("height", bodyheightslide);
       slide_1.append("text")
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
