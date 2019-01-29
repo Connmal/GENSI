@@ -179,8 +179,8 @@
         .attr("x", 0)
         .attr("y", 0)
         .attr("width", bodyWidth)
-        .attr("height", bodyHeight);
-        .attr("overflow", "scroll")
+        .attr("height", bodyHeight)
+        .attr("overflow", "scroll");
       slide_1.append("text")
         .attr("class", "lead")
         .text("")
