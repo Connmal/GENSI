@@ -1325,10 +1325,10 @@
           startTime = d.getTime();
 
           document.getElementById("Next").style.position="absolute";
-          document.getElementById("slide0").style.display = "block";
 
            document.getElementById("slide0").style.display = "none";
           currSlide+= .5;
+          showNext();
 
 
  } else if (currSlide == 1.5) {
