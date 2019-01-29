@@ -22,12 +22,10 @@
       function unhook() {
         hook=false;
       }
-      var bodyheightslide = $(document).height();
-      if  (bodyheightslide <2500) bodyheightslide = 2500;
+
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
-      if (bodyHeight < 750) bodyHeight = 750;
       var center = bodyWidth / 2;
       var middle = bodyHeight / 200;
 
@@ -183,7 +181,7 @@
         .attr("x", 0)
         .attr("y", 0)
         .attr("width", bodyWidth )
-        .attr("height", "bodyheightslide");
+        .attr("height", "2500");
       slide_1.append("text")
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
