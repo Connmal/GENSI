@@ -22,7 +22,7 @@
       function unhook() {
         hook=false;
       }
-      var bodywidthslide = $(document).height();
+      var bodyheightslide = $(document).height();
       if  (bodyheightslide <2500) bodyheightslide = 2500;
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
