@@ -26,7 +26,7 @@
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
-      if (bodyHeight > 2000) bodyHeight = 3000;
+      if (bodyHeight < 2000) bodyHeight = 3000;
       var center = bodyWidth / 2;
       var middle = bodyHeight / 200;
 
