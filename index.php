@@ -22,8 +22,6 @@
       function unhook() {
         hook=false;
       }
-      var bodywidthslide = $(document).width();
-      if (bodywidthslide < 2500) bodywidthslide = 2500;
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
@@ -85,6 +83,7 @@
         .on("contextmenu", function() {d3.event.preventDefault()});
 
       var force = d3.layout.force()
+        .size([bodyWidth, bodyHeight])
         .nodes([{x:bodyWidth / 2,
                   y:bodyHeight / 2.2,
                   fixed: true,
@@ -179,8 +178,9 @@
         .style("fill", "white")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", bodywidthslide)
+        .attr("width", bodyWidth)
         .attr("height", bodyHeight);
+        .attr("overflow", "scroll")
       slide_1.append("text")
         .attr("class", "lead")
         .text("")
