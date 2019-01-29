@@ -1327,6 +1327,8 @@
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "none";
            document.getElementById("slide1").style.display = "block";
+
+
           currSlide+= 0.5;
 
 
@@ -1359,7 +1361,7 @@
 
 
 
-          document.getElementById("slide0").style.display = "none";
+          
           document.getElementById("code_input").style.display = "none";
 
           var ex = document.getElementById("age_input");
