@@ -367,18 +367,18 @@
       .attr("class", "slideText")
       .attr("x", center - textWidth / 2)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 140)
-      .text("1.	You have the rights to the right to be informed, the right of access, the right to rectification, the right to erasure, the right to restrict processing, the right to data portability, the right to object and rights in relation to automated decision making and profiling. You have a right of access to a copy of the information comprised in your personal data (to do so you should submit a Subject Access Request); you have a right in certain circumstances to have inaccurate personal data rectified; and a right to object to decisions being taken by automated means. If dissatisfied with the University’s processing of personal data, you have the right to complain to the Information Commissioner’s Office")
-      .call(wrap, textWidth);
-      slide_1.append("text")
-      .attr("class", "slideText")
-      .attr("x", center - textWidth / 2)
-      .attr("y", text_offset_top + title_offset_top + lineHeight * 144)
-      .text("Contact for further information")
+      .text("You have the rights to the right to be informed, the right of access, the right to rectification, the right to erasure, the right to restrict processing, the right to data portability, the right to object and rights in relation to automated decision making and profiling. You have a right of access to a copy of the information comprised in your personal data (to do so you should submit a Subject Access Request); you have a right in certain circumstances to have inaccurate personal data rectified; and a right to object to decisions being taken by automated means. If dissatisfied with the University’s processing of personal data, you have the right to complain to the Information Commissioner’s Office")
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
       .attr("x", center - textWidth / 2)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 148)
+      .text("Contact for further information")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 152)
       .text("Researcher email: connor.malcolm@northumbria.ac.uk. Supervisor email: thomas.pollet@northumbria.ac.uk. Name and contact details of the Data Protection Officer at Northumbria University: Duncan James (dp.officer@northumbria.ac.uk). ")
       .call(wrap, textWidth);
       slide_1.style("display", "none");
