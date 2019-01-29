@@ -205,7 +205,7 @@
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
         .attr("y", text_offset_top + title_offset_top + lineHeight * 12)
-        .text("What is the purpose of this study?")
+        .text(<u>"What is the purpose of this study?"</u>)
         .call(wrap, textWidth);
       slide_1.append("text")
         .attr("class", "slideText")
