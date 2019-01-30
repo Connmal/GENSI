@@ -79,16 +79,11 @@
       // Declaration of graph properties
       //--------------------------------
 
-      var bodyselection = d3.select("body");
+
     var svg = d3.select("body").append("svg")
       .attr("width", bodyWidth)
       .attr("height", bodyHeight)
       .on("contextmenu", function() {d3.event.preventDefault()});
-
-      var svg2 = d3.select("bodyselection").append("svg")
-        .attr("width", bodyWidth)
-        .attr("height", bodyHeightone)
-        .on("contextmenu", function() {d3.event.preventDefault()});
 
 
       var force = d3.layout.force()
@@ -181,7 +176,7 @@
           .text("Completing this survey takes 10 to 15 minutes. Please make sure you read the questions carefully and to not leave the page before all questions have been answered.")
           .call(wrap, textWidth);
         }
-      var slide_1 = d3.select("svg2").append("g")
+      var slide_1 = d3.select("svg").append("g")
         .attr("id", "slide1")
       slide_1.append("rect")
         .style("fill", "white")
