@@ -395,6 +395,28 @@
       .call(wrap, textWidth);
       slide_1.style("display", "none");
 
+      var slide_2 = d3.select("svg").append("g")
+        .attr("id", "slide2");
+      slide_2.append("rect")
+        .style("fill", "white")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", bodyWidth )
+        .attr("height", bodyHeight);
+      slide_2.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight)
+        .text("If you would like to take part in this study, please read the statement below and click ‘Next’")
+        .call(wrap, textWidth);
+      slide_2.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+        .text("I understand the nature of the study, and what is required from me.  I understand that after I participate I will receive a debrief providing me with information about the study and contact details for the researcher.  I understand I am free to withdraw from the study at any time, without having to give a reason for withdrawing, and without prejudice. I agree to provide information to the investigator and understand that my contribution will remain confidential.   I also consent to the retention of this data under the condition that any subsequent use also be restricted to research projects that have gained ethical approval from Northumbria University.")
+        .call(wrap, textWidth);
+        slide_2.style("display", "none");
+
 
 
       var slide_4 = d3.select("svg").append("g")
@@ -1344,15 +1366,24 @@
 
  } else if (currSlide == 1.5) {
           document.getElementById("slide1").style.display = "none";
+          document.getElementById("slide2").style.display = "block"
 
+
+
+
+
+          currSlide+= 0.1;
+
+ } else if (currSlide == 1.6) {
+
+          document.getElementById("slide2").style.display = "none"
 
           var ex = document.getElementById("code_input");
           ex.style.left = string_l + "px";
           ex.style.top = string_t;
           ex.style.display = "block";
 
-
-          currSlide+= 0.5;
+        currSlide+= 0.4;
    } else if (currSlide == 2) {
 
 
