@@ -79,15 +79,15 @@
       // Declaration of graph properties
       //--------------------------------
 
-
+      var bodyselection = d3.select("body");
       var svg = d3.select("body").append("svg")
         .attr("width", bodyWidth)
         .attr("height", bodyHeight)
         .on("contextmenu", function() {d3.event.preventDefault()});
 
-        var svg2 = d3.select("body2").append("svg2")
+        var svg2 = d3.select("bodyselection").append("svg")
           .attr("width", bodyWidth)
-          .attr("height", bodyHeightoneight)
+          .attr("height", bodyHeightone)
           .on("contextmenu", function() {d3.event.preventDefault()});
 
 
@@ -189,8 +189,8 @@
         .style("fill", "white")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", 800 )
-        .attr("height", 3000 );
+        .attr("width", bodyWidth )
+        .attr("height", bodyHeightone );
       slide_1.append("text")
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
