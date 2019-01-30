@@ -83,6 +83,10 @@
         .attr("height", bodyHeight)
         .on("contextmenu", function() {d3.event.preventDefault()});
 
+        var svg2 = d3.select("body").append("svg2")
+          .attr("width", 800)
+          .attr("height", 3000)
+          .on("contextmenu", function() {d3.event.preventDefault()});
 
 
       var force = d3.layout.force()
@@ -175,17 +179,14 @@
           .text("Completing this survey takes 10 to 15 minutes. Please make sure you read the questions carefully and to not leave the page before all questions have been answered.")
           .call(wrap, textWidth);
         }
-      var slide_1 = d3.select("svg").append("g")
-        .attr("id", "slide1");
-      slide_1.append("body")
-        .attr("width", bodyWidth)
-        .attr("height", 3000)
+      var slide_1 = d3.select("svg2").append("g")
+        .attr("id", "slide1")
       slide_1.append("rect")
         .style("fill", "white")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", bodyWidth )
-        .attr("height", bodyHeight);
+        .attr("width", 800 )
+        .attr("height", 3000 );
       slide_1.append("text")
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
