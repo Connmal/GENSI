@@ -22,7 +22,8 @@
       function unhook() {
         hook=false;
       }
-
+      var bodyHeightone = $(document).height() - 20;
+      if (bodyHeightone < 3000) bodyHeightone = 3000;
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
@@ -78,15 +79,18 @@
       // Declaration of graph properties
       //--------------------------------
 
+
       var svg = d3.select("body").append("svg")
         .attr("width", bodyWidth)
         .attr("height", bodyHeight)
         .on("contextmenu", function() {d3.event.preventDefault()});
 
-        var svg2 = d3.select("body").append("svg")
-          .attr("width", 800)
-          .attr("height", 3000)
+        var svg2 = d3.select("body2").append("svg2")
+          .attr("width", bodyWidth)
+          .attr("height", bodyHeightoneight)
           .on("contextmenu", function() {d3.event.preventDefault()});
+
+
 
 
       var force = d3.layout.force()
