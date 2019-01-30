@@ -179,7 +179,7 @@
         .attr("id", "slide1");
       slide_1.append("svg")
         .attr("width", bodyWidth)
-        .attr("height", 3000)
+        .attr("height", "3000")
       slide_1.append("rect")
         .style("fill", "white")
         .attr("x", 0)
