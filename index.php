@@ -80,17 +80,15 @@
       //--------------------------------
 
       var bodyselection = d3.select("body");
-      var svg = d3.select("body").append("svg")
+    var svg = d3.select("body").append("svg")
+      .attr("width", bodyWidth)
+      .attr("height", bodyHeight)
+      .on("contextmenu", function() {d3.event.preventDefault()});
+
+      var svg2 = d3.select("bodyselection").append("svg")
         .attr("width", bodyWidth)
-        .attr("height", bodyHeight)
+        .attr("height", bodyHeightone)
         .on("contextmenu", function() {d3.event.preventDefault()});
-
-        var svg2 = d3.select("bodyselection").append("svg")
-          .attr("width", bodyWidth)
-          .attr("height", bodyHeightone)
-          .on("contextmenu", function() {d3.event.preventDefault()});
-
-
 
 
       var force = d3.layout.force()
@@ -189,8 +187,8 @@
         .style("fill", "white")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", bodyWidth )
-        .attr("height", bodyHeightone );
+        .attr("width", bodyWidth)
+        .attr("height",  bodyHeightone );
       slide_1.append("text")
         .attr("class", "slideText")
         .attr("x", center - textWidth / 2)
