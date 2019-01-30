@@ -83,7 +83,7 @@
         .attr("height", bodyHeight)
         .on("contextmenu", function() {d3.event.preventDefault()});
 
-        var svg2 = d3.select("body").append("svg2")
+        var svg2 = d3.select("body").append("svg")
           .attr("width", 800)
           .attr("height", 3000)
           .on("contextmenu", function() {d3.event.preventDefault()});
