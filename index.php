@@ -594,6 +594,84 @@
           .call(wrap, textWidth);
         slide_9.style("display", "none");
 
+        var slide_10 = d3.select("svg").append("g")
+          .attr("id", "slide10");
+        slide_10.append("rect")
+          .style("fill", "white")
+          .attr("class", "slide")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", bodyWidth)
+          .attr("height", bodyHeight);
+        slide_10.append("text")
+          .attr("class", "slideText numfri")
+          .attr("x", center - (textWidth / 2))
+          .attr("y", text_offset_top)
+          .text("PARTICIPANT DEBRIEF")
+          .call(wrap, textWidth);
+        slide_10.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 3)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+          .text("What was the purpose of the project?")
+          .call(wrap, textWidth);
+        slide_10.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
+          .text("This project aimed to explain how loneliness and extroversion-introversion interact with social network size and emotional closeness to network members. Social networks play a huge role in all our lives and are incredibly important to our wellbeing (Berkman & Glass, 2000). So, understanding what variables are associated with emotionally closer and larger networks is integral to beginning to think about how we might aid those who struggle in fostering an appropriate social network. This research expects to discover extroversion to be related with larger network sizes, vice versa for introversion. And that loneliness would be related with smaller network sizes and low emotional closeness to network members.")
+          .call(wrap, textWidth);
+        slide_10.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 3)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 16)
+          .text("How will I find out about the results?")
+          .call(wrap, textWidth);
+        slide_10.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 20)
+          .text("After approximately 1-2 months, once the data analysis has been completed the researchers Connor Malcolm  (connor.malcolm@northumbria.ac.uk)) will email you a general summary of the results of this research, upon email request.")
+          .call(wrap, textWidth);
+        slide_10.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 3)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 24)
+          .text("If I change my mind and wish to withdraw the information I have provided, how do I do this?")
+          .call(wrap, textWidth);
+        slide_10.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 28)
+          .text("If you wish to withdraw your data then email the investigator (connor.malcolm@northumbria .ac.uk) or their supervisor (thomas.pollet@northumbria.ac.uk) within 1 week of taking part and give them the code word (that you input on the survey) After this time it might not be possible to withdraw your data as it could already have been processed and analysed.")
+          .call(wrap, textWidth);
+        slide_10.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 34)
+          .text("The data collected in this study may also be published in scientific journals or presented at conferences.  Information and data gathered during this research study will only be available to the research team identified in the information sheet. Should the research be presented or published in any form, all data will be anonymous (i.e. your personal information or data will not be identifiable). It will be hosted on the open science framework, should you")
+          .call(wrap, textWidth);
+        slide_10.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 40)
+          .text("All information and data gathered during this research will be stored in line with the Data Protection Act and GDPR. The anonymised data might be stored indefinitely in order to comply with good scientific practice. Should you not want this, then please contact the researchers and request removal of your data. Note however, that at no point will your personal information or data be revealed. ")
+          .call(wrap, textWidth);
+        slide_10.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 48)
+          .text("If you wish to receive feedback about the findings of this research study, then please contact the researcher at connor.malcolm@northumbria.ac.uk ")
+          .call(wrap, textWidth);
+        slide_10.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 52)
+          .text("This study and its protocol have received full ethical approval from Faculty of Health and Life Sciences Research Ethics Committee. If you require confirmation of this, or if you have any concerns or worries concerning this research, or if you wish to register a complaint, please contact the Chair of this Committee, santosh.vijaykumar@northumbria.ac.uk stating the title of the research project and the name of the researcher")
+          .call(wrap, textWidth);
+        slide_10.style("display", "none");
+
+
 
         var motivationText = d3.select("svg").append("g")
           .attr("id", "motivationText");
@@ -2704,6 +2782,8 @@
           sf.style.display = "block";
           nd.style.display = "none";
 
+          document.getElementById("slide10").style.display = "block";
+
           checked = true;
 
 
@@ -2795,11 +2875,14 @@
 
 
 
+        } else if (currSlide == 48) {
+
+              document.getElementById("slide10").style.display = "none";
 
             currSlide++;
             showNext();
 
-        } else if (currSlide == 48) {
+        } else if (currSlide == 49) {
               document.getElementById("submitForm").style.display = "none";
               document.getElementById("submitButton").style.display = "none";
               document.getElementById("Next").style.position="none";
