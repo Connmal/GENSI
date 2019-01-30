@@ -177,9 +177,9 @@
         }
       var slide_1 = d3.select("svg").append("g")
         .attr("id", "slide1");
-      slide_1.append("svg")
+      slide_1.append("body")
         .attr("width", bodyWidth)
-        .attr("height", "3000")
+        .attr("height", 3000)
       slide_1.append("rect")
         .style("fill", "white")
         .attr("x", 0)
