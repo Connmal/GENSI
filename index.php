@@ -23,11 +23,11 @@
         hook=false;
       }
       var bodyHeightone = $(document).height() - 20;
-      if (bodyHeightone < 3000) bodyHeightone = 3000;
+      if (bodyHeightone < 2600) bodyHeightone = 3000;
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
-      if (bodyHeight < 750) bodyHeight = 750;
+      if (bodyHeight < 2500) bodyHeight = 750;
       var center = bodyWidth / 2;
       var middle = bodyHeight / 200;
 
@@ -79,11 +79,15 @@
       // Declaration of graph properties
       //--------------------------------
 
+    var bodyselection = d3.select("body");
 
     var svg = d3.select("body").append("svg")
       .attr("width", bodyWidth)
       .attr("height", bodyHeight)
+      .attr("height", bodyHeightone)
       .on("contextmenu", function() {d3.event.preventDefault()});
+
+
 
 
       var force = d3.layout.force()
@@ -2780,7 +2784,8 @@
 
 
           document.getElementById("slide10").style.display = "none";
-
+          document.getElementById("submitForm").style.display = "block";
+          document.getElementById("submitButton").style.display = "block";
           checked = true;
 
 
