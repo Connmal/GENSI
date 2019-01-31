@@ -3337,7 +3337,7 @@
 
     <div class="input-group" display="none" id="loneliness20" method="get">
       <form id="lo20user" display="none">
-        <span class="slideText">How often do you feel that people are around you but not with you?</span><br><br>
+        <span class="slideText">How often do you feel that there are people you can turn to?</span><br><br>
         <input type="radio" name="lo20" value="Always"><span class="questionText">  Always</span><br>
         <input type="radio" name="lo20" value="Sometimes"><span class="questionText">  Sometimes </span><br>
         <input type="radio" name="lo20" value="Rarely"><span class="questionText">  Rarely</span><br>
