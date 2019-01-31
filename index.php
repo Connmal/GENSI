@@ -2867,15 +2867,12 @@
 
 
         } else if (currSlide == 48) {
+              document.getElementById("submitButton").style.display = "none";
+              document.getElementById("submitForm").style.display = "none";
               document.getElementById("slide9").style.display = "none";
-
+              document.getElementById('Next').style.display = "none";
 
              currSlide++;
-             showNext();
-
-       } else if (currSlide == 49){
-         document.getElementById("slide10").style.display = "block";
-         document.getElementById("Next").style.display = "none";
 
 
 
