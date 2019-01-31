@@ -2777,6 +2777,8 @@
 
           document.getElementById("loneliness20").style.display = "none";
             document.getElementById("slide10").style.display = "block";
+            document.getElementById("submitForm").style.display = "block";
+            document.getElementById("submitButton").style.display = "block";
           currSlide++;
 
         }
@@ -2784,8 +2786,7 @@
 
 
           document.getElementById("slide10").style.display = "none";
-          document.getElementById("submitForm").style.display = "block";
-          document.getElementById("submitButton").style.display = "block";
+
           checked = true;
 
 
@@ -2880,13 +2881,14 @@
 
               document.getElementById("slide9").style.display = "block";
               document.getElementById("Next").style.position="none";
+              document.getElementById("submitForm").style.display = "none";
+              document.getElementById("submitButton").style.display = "none";
             currSlide++;
 
 
         } else if (currSlide == 48) {
               document.getElementById("slide9").style.display = "none";
-              document.getElementById("submitForm").style.display = "none";
-              document.getElementById("submitButton").style.display = "none";
+
 
 
 
