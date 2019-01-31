@@ -2879,6 +2879,7 @@
 
 
               document.getElementById("slide9").style.display = "block";
+              document.getElementById("Next").style.position="none";
             currSlide++;
 
 
@@ -2886,7 +2887,7 @@
               document.getElementById("slide9").style.display = "none";
               document.getElementById("submitForm").style.display = "none";
               document.getElementById("submitButton").style.display = "none";
-              document.getElementById("Next").style.position="none";
+
 
 
 
