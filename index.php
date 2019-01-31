@@ -658,23 +658,15 @@
           .text("This study and its protocol have received full ethical approval from Faculty of Health and Life Sciences Research Ethics Committee. If you require confirmation of this, or if you have any concerns or worries concerning this research, or if you wish to register a complaint, please contact the Chair of this Committee, santosh.vijaykumar@northumbria.ac.uk stating the title of the research project and the name of the researcher")
           .call(wrap, textWidth);
         slide_9.style("display", "none");
-
-        var slide_10 = d3.select("svg").append("g")
-          .attr("id", "slide10");
-        slide_10.append("rect")
-          .style("fill", "white")
-          .attr("class", "slide")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", bodyWidth)
-          .attr("height", bodyHeight);
-        slide_10.append("text")
-          .attr("class", "slideText numfri")
-          .attr("x", center - (textWidth / 2))
-          .attr("y", text_offset_top)
-          .text("Thank you for participating, you may close this broswer window.")
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 56)
+          .text("Thank you for participating in this survey. You may now close the browser")
           .call(wrap, textWidth);
-        slide_10.style("display", "none");
+        slide_9.style("display", "none");
+
+
 
 
 
