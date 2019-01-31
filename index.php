@@ -2781,7 +2781,7 @@
             document.getElementById("submitButton").style.display = "block";
 
           currSlide++;
-          showNext();
+
         }
         } else if (currSlide == 47) {
 
@@ -2789,6 +2789,7 @@
           document.getElementById("slide10").style.display = "none";
           document.getElementById("submitForm").style.display = "none";
           document.getElementById("submitButton").style.display = "none";
+          document.getElementById("NextDiv").style.display = "none";
 
           checked = true;
 
@@ -2880,16 +2881,11 @@
             checked = false
 
 
-
-
-              document.getElementById("slide9").style.display = "block";
-
-
             currSlide++;
 
 
         } else if (currSlide == 48) {
-              document.getElementById("slide9").style.display = "none";
+              document.getElementById("slide9").style.display = "block";
               document.getElementById("Next").style.position="none";
 
 
