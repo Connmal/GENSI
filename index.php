@@ -2776,20 +2776,18 @@
           checked = false;
 
             document.getElementById("loneliness20").style.display = "none";
-            document.getElementById("slide10").style.display = "block";
-            document.getElementById("submitForm").style.display = "block";
-          var sb = document.getElementById("submitButton")
-            document.getElementById("NextDiv").style.display = "none";
+
 
           currSlide++;
-
+          showNext();
         }
         } else if (currSlide == 47) {
 
+          document.getElementById("slide10").style.display = "block";
+          document.getElementById("submitForm").style.display = "block";
+          var sb = document.getElementById("submitButton")
+          document.getElementById("NextDiv").style.display = "none";
 
-          document.getElementById("slide10").style.display = "none";
-          document.getElementById("submitForm").style.display = "none";
-          document.getElementById("submitButton").style.display = "none";
 
 
           checked = true;
@@ -2886,10 +2884,14 @@
             showNext();
 
         } else if (currSlide == 48) {
-              document.getElementById("slide9").style.display = "block";
-              document.getElementById("Next").style.position="none";
+              document.getElementById("slide10").style.display = "none";
               document.getElementById("submitForm").style.display = "none";
               document.getElementById("submitButton").style.display = "none";
+
+       } else if (currSlide == 49){
+         document.getElementById("slide9").style.display = "block";
+         document.getElementById("Next").style.display = "none";
+
 
 
 
