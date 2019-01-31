@@ -2880,7 +2880,7 @@
 
               document.getElementById("slide9").style.display = "block";
             currSlide++;
-            showNext();
+
 
         } else if (currSlide == 48) {
               document.getElementById("slide9").style.display = "none";
@@ -2888,7 +2888,7 @@
               document.getElementById("submitButton").style.display = "none";
               document.getElementById("Next").style.position="none";
 
-              document.getElementById("motivationText").style.display = "none";
+
 
 
 // Release window close-prevention
