@@ -2888,6 +2888,8 @@
               document.getElementById("submitForm").style.display = "none";
               document.getElementById("submitButton").style.display = "none";
 
+             currSlide++;
+
        } else if (currSlide == 49){
          document.getElementById("slide9").style.display = "block";
          document.getElementById("Next").style.display = "none";
@@ -3379,7 +3381,7 @@
         <input type="hidden" name="<?php echo $_POST['statusvarname1']; ?>" value="<?php echo $_POST['statusvarvalue1']; ?>"/>
         <input type="hidden" name="<?php echo $_POST['varname1']; ?>" id="qu1_id" value=""/>
         <input type="hidden" id="nomem" name="nomem" value="<?php echo $_POST['nomem']; ?>"/>
-        <input name="<?php echo $_POST['nextvarname']; ?>" id="submitButton" class="btn btn-default" type="submit" value="Sumbit"/>
+        <input name="<?php echo $_POST['nextvarname']; ?>" id="submitButton" class="btn btn-default" type="Next" value="Sumbit"/>
       </form>
     </div>
 
