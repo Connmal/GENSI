@@ -661,7 +661,7 @@
         slide_9.append("text")
           .attr("class", "slideText")
           .attr("x", center - textWidth / 2)
-          .attr("y", text_offset_top + title_offset_top + lineHeight * 56)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 60)
           .text("Thank you for participating in this survey. You may now close the browser")
           .call(wrap, textWidth);
         slide_9.style("display", "none");
