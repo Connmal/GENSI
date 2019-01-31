@@ -2872,7 +2872,7 @@
               document.getElementById("submitButton").style.display = "none";
 
              currSlide++;
-             showNext();
+             
 
        } else if (currSlide == 49){
          document.getElementById("slide10").style.display = "block";
