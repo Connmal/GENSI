@@ -2775,13 +2775,13 @@
           }
           checked = false;
 
-          document.getElementById("loneliness20").style.display = "none";
+            document.getElementById("loneliness20").style.display = "none";
             document.getElementById("slide10").style.display = "block";
             document.getElementById("submitForm").style.display = "block";
             document.getElementById("submitButton").style.display = "block";
 
           currSlide++;
-
+          showNext();
         }
         } else if (currSlide == 47) {
 
