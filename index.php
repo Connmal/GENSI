@@ -2868,11 +2868,10 @@
 
         } else if (currSlide == 48) {
               document.getElementById("slide9").style.display = "none";
-              document.getElementById("submitForm").style.display = "none";
-              document.getElementById("submitButton").style.display = "none";
+
 
              currSlide++;
-             
+             showNext();
 
        } else if (currSlide == 49){
          document.getElementById("slide10").style.display = "block";
