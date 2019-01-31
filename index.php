@@ -2864,7 +2864,7 @@
 
 
             currSlide++;
-            showNext();
+
 
         } else if (currSlide == 48) {
               document.getElementById("slide9").style.display = "none";
