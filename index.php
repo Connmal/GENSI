@@ -443,7 +443,7 @@
         .attr("class", "slideText")
         .attr("x", center - (textWidth / 2))
         .attr("y", text_offset_top + lineHeight * ($('#slide4 .slideText tspan').length + $('#slide4 .slideText').length-1))
-        .text("From time to time, most people discuss important matters with other people they trust. These important matters may be personal or social.The people with whom you discuss important matters may be friends, family or co-workers. Looking back over the last six months, who are the people with whom you discussed matters important to you over the telephone, text or in person?  Please use their first names or initials.")
+        .text("From time to time, most people discuss important matters with other people they trust. These important matters may be personal or social.The people with whom you discuss important matters may be friends, family or co-workers. Looking back over the last six months, who are the people with whom you discussed matters important to you over the telephone, text or in person?")
         .call(wrap, textWidth);
       slide_4.append("text")
         .attr("class", "slideText")
