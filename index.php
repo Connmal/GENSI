@@ -2902,7 +2902,7 @@
 
     <div class="input-group" id="code_input" method="get" display="none" onsubmit ="return false;">
       <form id="CodeID">
-      <span class="slideText">Please enter a word that you will remember in case you wish to withdraw your data from this study.</span>
+      <span class="slideText">Please enter a word that you will remember in case you wish to withdraw your data from this study. (Make sure it is not your email or any identifiable information)</span>
         <input type="text" name="code" class="form-control" placeholder="..." size="10"><br><br>
       </form>
       </div>
