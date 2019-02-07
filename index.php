@@ -450,7 +450,7 @@
         .attr("id", "one_at_a_time")
         .attr("x", center - (textWidth / 2))
         .attr("y", text_offset_top + lineHeight * ($('#slide4 .slideText tspan').length + $('#slide4 .slideText').length-1))
-        .text("You can name up to 10 people with whom you discuss important matters. CLICK ON THEIR NAMES TO TOGGLE GENDER. Pink is female and teal is male.")
+        .text("You can name up to 10 people with whom you discuss important matters. CLICK ON THEIR NAMES TO TOGGLE GENDER (As assigned at birth). Pink is female and teal is male.")
         .call(wrap, textWidth);
       var textheight = $('#slide4 .slideText tspan').length + $('#slide4 .slideText').length;
       slide_4.append("text")
@@ -2910,7 +2910,7 @@
 
     <div class="input-group" id="age_input" method="get" display="none" onsubmit = "return false;">
       <form id="AgeID">
-      <span class="slideText">Please state your age</span>
+      <span class="slideText">Please state your age (Years, in numbers)</span>
         <input type="text" name="age" class="form-control" placeholder="Age" size="10"><br><br>
         </form>
       </div>
@@ -2949,7 +2949,7 @@
 
     <div class="popop_box" id="fewFriends_box">
       <div class="popup_box" id="friendPopup">
-            <p class="popup_text">You have not entered 15 people. Are you sure that there is no one else with whom you discuss important matters? If so, please click ‘Next’ to continue. If there is someone else, please enter the name and click ‘add person’.</p>
+            <p class="popup_text">You have not entered 10 people. Are you sure that there is no one else with whom you discuss important matters? If so, please click ‘Next’ to continue. If there is someone else, please enter the name and click ‘add person’.</p>
             <button class="btn btn-default" onclick="closeFriendPopup()">Close</button>
       </div>
     </div>
