@@ -22,11 +22,12 @@
       function unhook() {
         hook=false;
       }
-
+      var bodyHeightone = $(document).height() - 20;
+      if (bodyHeightone < 2600) bodyHeightone = 3000;
       var bodyWidth = $(document).width();
       var bodyHeight = $(document).height() - 20;
       if (bodyWidth < 800) bodyWidth = 800;
-      if (bodyHeight < 750) bodyHeight = 750;
+      if (bodyHeight < 2500) bodyHeight = 750;
       var center = bodyWidth / 2;
       var middle = bodyHeight / 200;
 
@@ -78,10 +79,16 @@
       // Declaration of graph properties
       //--------------------------------
 
-      var svg = d3.select("body").append("svg")
-        .attr("width", bodyWidth)
-        .attr("height", bodyHeight)
-        .on("contextmenu", function() {d3.event.preventDefault()});
+    var bodyselection = d3.select("body");
+
+    var svg = d3.select("body").append("svg")
+      .attr("width", bodyWidth)
+      .attr("height", bodyHeight)
+      .attr("height", bodyHeightone)
+      .on("contextmenu", function() {d3.event.preventDefault()});
+
+
+
 
       var force = d3.layout.force()
         .size([bodyWidth, bodyHeight])
@@ -170,9 +177,252 @@
           .attr("class", "slideText")
           .attr("x", center - textWidth / 2)
           .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
-          .text("Completing this survey takes 10 to 15 minutes. Please make sure to not leave the page before all questions have been answered.")
+          .text("Completing this survey takes 10 to 15 minutes. Please make sure you read the questions carefully and to not leave the page before all questions have been answered.")
           .call(wrap, textWidth);
-      }
+        }
+      var slide_1 = d3.select("svg").append("g")
+        .attr("id", "slide1")
+      slide_1.append("rect")
+        .style("fill", "white")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", bodyWidth)
+        .attr("height",  bodyHeightone );
+      slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight)
+        .text("Please read the following slide before continuing. Clicking Next demonstrates you have read and understood the information below.")
+        .call(wrap, textWidth);
+      slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+        .text("PARTICIPANT INFORMATION.")
+        .call(wrap, textWidth);
+      slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
+        .text("You are being invited to take part in this research study.  Before you decide it is important for you to read this slide so you understand why the study is being carried out and what it will involve.")
+        .call(wrap, textWidth);
+      slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 3)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 12)
+        .text("What is the purpose of this study?")
+        .call(wrap, textWidth);
+      slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 16)
+        .text("The aim of this research is to understand how extroversion-introversion and loneliness are associated with network layer size and emotional closeness to network members.")
+        .call(wrap, textWidth);
+      slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 3)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 20)
+        .text("Why have I been invited?")
+       .call(wrap, textWidth);
+     slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 24)
+        .text("It is important that we assess as many people as possible and you have indicated that you are interested in taking part in this study, and that you are an adult aged 18 or over and have a reasonable understanding of English.")
+        .call(wrap, textWidth);
+      slide_1.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 3)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 28)
+        .text("Do I have to take apart?")
+       .call(wrap, textWidth);
+      slide_1.append("text")
+       .attr("class", "slideText")
+       .attr("x", center - textWidth / 2)
+       .attr("y", text_offset_top + title_offset_top + lineHeight * 32)
+       .text("No. It is up to you whether you would like to take part in the study.  I am giving you this information sheet to help you make that decision.  If you do decide to take part, remember that you can stop being involved in the study whenever you choose, without telling me why.  You are completely free to decide whether or not to take part, or to take part and then leave the study before completion.  If you no longer want to take part, simply close your browser window")
+       .call(wrap, textWidth);
+      slide_1.append("text")
+       .attr("class", "slideText")
+       .attr("x", center - textWidth / 3)
+       .attr("y", text_offset_top + title_offset_top + lineHeight * 40)
+       .text("What will happen if I take part?")
+       .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 44)
+      .text("You will be asked complete a survey that will last 20-30 minutes which consists of questions about your social network and your perceived emotional closeness to network members. You will also be asked to rate yourself on your personality, specifically how you rate in extroversion. And then finally you will be asked to rate yourself on several statements related to loneliness.")
+      .call(wrap, textWidth);
+     slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 50)
+      .text("What are the possible disadvantages of taking part?")
+      .call(wrap, textWidth);
+     slide_1.append("text")
+     .attr("class", "slideText")
+     .attr("x", center - textWidth / 2)
+     .attr("y", text_offset_top + title_offset_top + lineHeight * 54)
+     .text("Considering the nature of this research, participants may find questions about loneliness disconcerting and may feel uncomfortable answering such questions. However, the research will not gather and personal information about you such as your name, your email address or your IP. Any information given about your social network members will be anonymised during analysis and into randomly generated number codes. However, if you still feel uncomfortable about answering some of fields on this survey you are free to skip them or stop the survey at any time (simply close the browser). If you have completed the research already but have changed your mind on whether you wish to have your information used, you may send the code you inputted at the start of the survey to the researcher (email below) so you can withdraw your information. ")
+     .call(wrap, textWidth);
+     slide_1.append("text")
+     .attr("class", "slideText")
+     .attr("x", center - textWidth / 3)
+     .attr("y", text_offset_top + title_offset_top + lineHeight * 64)
+     .text("Will my taking part in this study be kept confidential and anonymous?")
+     .call(wrap, textWidth);
+     slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 68)
+      .text("Yes.  Your name will not be written on any of the data we collect; the written information you provide will be related to your code name you inputted at the beginning of the survey, not your name. Your name or the names you input in the social networks you describe will not appear in any reports or documents resulting from this study. The data collected from you in this study will be confidential.  Anonymised data from this study will be posted on the open science framework (http://osf.io) in line with current scientific practice. ")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 74)
+      .text("How will my data be stored, and how long will it be stored for?")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 78)
+      .text("All data from the survey will be stored on the University U drive, which is password protected.  All data will be stored in accordance with University guidelines and the Data Protection Act (2018).  No personally identifiable data will be stored. After removing the information on your network members, the data will also be available on the open science framework (http://osf.io) however all this data will be anonymous. Should you not want your anonymized data to become public, then do not take part.")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 86)
+      .text("What categories of personal data will be collected and processed in this study?")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 90)
+      .text("This research will be collection your age and gender. However, it will not gather any other personal information aside from information about your social network members that will be anonymised prior to analysis.")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 94)
+      .text("What is the legal basis for processing personal data?")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 98)
+      .text("All data collected in this study are processed in line with GDPR Article 6(1) e: processing is necessary for the performance of a task carried out in the public interest.")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 102)
+      .text("Who are the recipients or categories of recipients of personal data, if any?")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 106)
+      .text("The researchers Connor Malcolm and Dr. Thomas Pollet at Northumbria university. No other researchers will be involved in the handling of the raw data.")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 110)
+      .text("What will happen to the results of the study and could personal data collected be used in future research?")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 114)
+      .text("The general findings might be reported in a scientific journal or presented at a research conference, however the data will be anonymized and you will not be personally identifiable. We can provide you with a summary of the findings from the study if you email the researcher at the address listed below. Anonymized data will be posted on the open science framework in order to comply with the norm of transparency in research. Researchers and academics will have access to this research data through the open science framework (http://osf.io). Should you not want your anonymized data to be shared, then please do not take part.")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 122)
+      .text("Who is Organizing and Funding the Study?")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 126)
+      .text("Northumbria University health and Life Sciences department")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 130)
+      .text("Who has reviewed this study?")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 134)
+      .text("The Faculty of Health and Life Sciences Research Ethics Committee at Northumbria University have reviewed the study in order to safeguard your interests and have granted approval to conduct the study.")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 138)
+      .text("What are my rights as a participant in this study?")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 142)
+      .text("You have the rights to the right to be informed, the right of access, the right to rectification, the right to erasure, the right to restrict processing, the right to data portability, the right to object and rights in relation to automated decision making and profiling. You have a right of access to a copy of the information comprised in your personal data (to do so you should submit a Subject Access Request); you have a right in certain circumstances to have inaccurate personal data rectified; and a right to object to decisions being taken by automated means. If dissatisfied with the University’s processing of personal data, you have the right to complain to the Information Commissioner’s Office")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 3)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 152)
+      .text("Contact for further information")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 154)
+      .text("Researcher email: connor.malcolm@northumbria.ac.uk.")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 156)
+      .text("Supervisor email: thomas.pollet@northumbria.ac.uk.")
+      .call(wrap, textWidth);
+      slide_1.append("text")
+      .attr("class", "slideText")
+      .attr("x", center - textWidth / 2)
+      .attr("y", text_offset_top + title_offset_top + lineHeight * 158)
+      .text("Name and contact details of the Data Protection Officer at Northumbria University: Duncan James (dp.officer@northumbria.ac.uk).")
+      .call(wrap, textWidth);
+      slide_1.style("display", "none");
+
+      var slide_2 = d3.select("svg").append("g")
+        .attr("id", "slide2");
+      slide_2.append("rect")
+        .style("fill", "white")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", bodyWidth )
+        .attr("height", bodyHeight);
+      slide_2.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight)
+        .text("If you would like to take part in this study, please read the statement below and click ‘Next’")
+        .call(wrap, textWidth);
+      slide_2.append("text")
+        .attr("class", "slideText")
+        .attr("x", center - textWidth / 2)
+        .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+        .text("I understand the nature of the study, and what is required from me.  I understand that after I participate I will receive a debrief providing me with information about the study and contact details for the researcher.  I understand I am free to withdraw from the study at any time, without having to give a reason for withdrawing, and without prejudice. I agree to provide information to the investigator and understand that my contribution will remain confidential.   I also consent to the retention of this data under the condition that any subsequent use also be restricted to research projects that have gained ethical approval from Northumbria University.")
+        .call(wrap, textWidth);
+        slide_2.style("display", "none");
+
+
 
       var slide_4 = d3.select("svg").append("g")
         .attr("id", "slide4");
@@ -193,14 +443,14 @@
         .attr("class", "slideText")
         .attr("x", center - (textWidth / 2))
         .attr("y", text_offset_top + lineHeight * ($('#slide4 .slideText tspan').length + $('#slide4 .slideText').length-1))
-        .text("From time to time, most people discuss important matters with other people. Looking back over the last six months, who are the people with whom you discussed matters important to you? Just tell me their first names or initials.")
+        .text("From time to time, most people discuss important matters with other people they trust. These important matters may be personal or social.The people with whom you discuss important matters may be friends, family or co-workers. Looking back over the last six months, who are the people with whom you discussed matters important to you over the telephone, text or in person?")
         .call(wrap, textWidth);
       slide_4.append("text")
         .attr("class", "slideText")
         .attr("id", "one_at_a_time")
         .attr("x", center - (textWidth / 2))
         .attr("y", text_offset_top + lineHeight * ($('#slide4 .slideText tspan').length + $('#slide4 .slideText').length-1))
-        .text("You can name up to 15 people with whom you discuss important matters. CLICK ON THEIR NAMES TO TOGGLE GENDER.")
+        .text("You can name up to 10 people with whom you discuss important matters. CLICK ON THEIR NAMES TO TOGGLE GENDER (As assigned at birth). Pink is female and teal is male.")
         .call(wrap, textWidth);
       var textheight = $('#slide4 .slideText tspan').length + $('#slide4 .slideText').length;
       slide_4.append("text")
@@ -331,6 +581,96 @@
         .attr("y", text_offset_top)
         .text("We will now ask a some questions about yourself. Please click \"Next\" after answering each question to continue.")
         .call(wrap, textWidth)
+
+        var slide_9 = d3.select("svg").append("g")
+          .attr("id", "slide9");
+        slide_9.append("rect")
+          .style("fill", "white")
+          .attr("class", "slide")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", bodyWidth)
+          .attr("height", bodyHeight);
+        slide_9.append("text")
+          .attr("class", "slideText numfri")
+          .attr("x", center - (textWidth / 2))
+          .attr("y", text_offset_top)
+          .text("PARTICIPANT DEBRIEF")
+          .call(wrap, textWidth);
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 3)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 4)
+          .text("What was the purpose of the project?")
+          .call(wrap, textWidth);
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 8)
+          .text("This project aimed to explain how loneliness and extroversion-introversion interact with social network size and emotional closeness to network members. Social networks play a huge role in all our lives and are incredibly important to our wellbeing (Berkman & Glass, 2000). So, understanding what variables are associated with emotionally closer and larger networks is integral to beginning to think about how we might aid those who struggle in fostering an appropriate social network. This research expects to discover extroversion to be related with larger network sizes, vice versa for introversion. And that loneliness would be related with smaller network sizes and low emotional closeness to network members.")
+          .call(wrap, textWidth);
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 3)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 16)
+          .text("How will I find out about the results?")
+          .call(wrap, textWidth);
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 20)
+          .text("After approximately 1-2 months, once the data analysis has been completed the researchers Connor Malcolm  (connor.malcolm@northumbria.ac.uk)) will email you a general summary of the results of this research, upon email request.")
+          .call(wrap, textWidth);
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 3)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 24)
+          .text("If I change my mind and wish to withdraw the information I have provided, how do I do this?")
+          .call(wrap, textWidth);
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 28)
+          .text("If you wish to withdraw your data then email the investigator (connor.malcolm@northumbria .ac.uk) or their supervisor (thomas.pollet@northumbria.ac.uk) within 1 week of taking part and give them the code word (that you input on the survey) After this time it might not be possible to withdraw your data as it could already have been processed and analysed.")
+          .call(wrap, textWidth);
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 34)
+          .text("The data collected in this study may also be published in scientific journals or presented at conferences.  Information and data gathered during this research study will only be available to the research team identified in the information sheet. Should the research be presented or published in any form, all data will be anonymous (i.e. your personal information or data will not be identifiable). It will be hosted on the open science framework, should you")
+          .call(wrap, textWidth);
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 40)
+          .text("All information and data gathered during this research will be stored in line with the Data Protection Act and GDPR. The anonymised data might be stored indefinitely in order to comply with good scientific practice. Should you not want this, then please contact the researchers and request removal of your data. Note however, that at no point will your personal information or data be revealed. ")
+          .call(wrap, textWidth);
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 48)
+          .text("If you wish to receive feedback about the findings of this research study, then please contact the researcher at connor.malcolm@northumbria.ac.uk ")
+          .call(wrap, textWidth);
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 52)
+          .text("This study and its protocol have received full ethical approval from Faculty of Health and Life Sciences Research Ethics Committee. If you require confirmation of this, or if you have any concerns or worries concerning this research, or if you wish to register a complaint, please contact the Chair of this Committee, santosh.vijaykumar@northumbria.ac.uk stating the title of the research project and the name of the researcher")
+          .call(wrap, textWidth);
+        slide_9.style("display", "none");
+        slide_9.append("text")
+          .attr("class", "slideText")
+          .attr("x", center - textWidth / 2)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 60)
+          .text("Thank you for participating in this survey. You may now close the browser")
+          .call(wrap, textWidth);
+        slide_9.style("display", "none");
+
+
+
+
+
+
 
 
 
@@ -800,7 +1140,7 @@
             document.getElementById("second_friend_text").style.display = "block";
           }
 
-          if (numFriends == 14) {
+          if (numFriends == 9) {
             document.getElementById("second_friend_text").style.display = "none";
             document.getElementById("final_friend_text").style.display = "block";
             document.getElementById("one_at_a_time").style.display = "none";
@@ -810,7 +1150,7 @@
 
           numFriends++;
 
-          if (numFriends <= 15) {
+          if (numFriends <= 10) {
             var node = {name: friendName.value,
                         id: numFriends,
                         gender:"",
@@ -822,7 +1162,7 @@
                         sawStats:false,
                         edu:null,
                         freq:null,
-                        friendsWith:"",
+                        friendsWith:",",
                         enjoy:"",
                         like:"",
                         interest:"",
@@ -922,8 +1262,11 @@
                   console.log("source: " + sourceIndex);
                 }
               });
+
               nodes[sourceIndex].friendsWith += targetIndex.toString();
               nodes[targetIndex].friendsWith += sourceIndex.toString();
+
+
               links.push({source: sourceIndex, target: targetIndex});
             }
             selected = false;
@@ -1072,16 +1415,36 @@
 
           document.getElementById("Next").style.position="absolute";
           document.getElementById("slide0").style.display = "none";
+           document.getElementById("slide1").style.display = "block";
+
+
+          currSlide+= 0.5;
+
+
+
+ } else if (currSlide == 1.5) {
+          document.getElementById("slide1").style.display = "none";
+          document.getElementById("slide2").style.display = "block"
+
+
+
+
+
+          currSlide+= 0.1;
+
+ } else if (currSlide == 1.6) {
+
+          document.getElementById("slide2").style.display = "none"
 
           var ex = document.getElementById("code_input");
           ex.style.left = string_l + "px";
           ex.style.top = string_t;
           ex.style.display = "block";
-          currSlide++;
 
-
-
+        currSlide+= 0.4;
    } else if (currSlide == 2) {
+
+
      if ($('input[name=code]').val().length == 0 && checked == false && !skipped) {
        promptNonresponse();
        checked = true;
@@ -1094,9 +1457,6 @@
        }}
 
 
-
-
-          document.getElementById("slide0").style.display = "none";
           document.getElementById("code_input").style.display = "none";
 
           var ex = document.getElementById("age_input");
@@ -1169,9 +1529,9 @@
 
           currSlide++;
         } else if (currSlide == 6) {
-          if (numFriends < 15 && checked == false) {
+          if (numFriends < 10 && checked == false) {
             checked = true;
-            console.log("fewer than 15 friends")
+            console.log("fewer than 10 friends")
             friendPromptNonresponse();
           } else {
             checked = false;
@@ -2390,13 +2750,26 @@
           }
           checked = false;
 
-          document.getElementById("loneliness20").style.display = "none";
+            document.getElementById("loneliness20").style.display = "none";
+
+
+          currSlide++;
+          showNext();
+        }
+        } else if (currSlide == 47) {
+
+
+          document.getElementById("submitForm").style.display = "block";
+          var sb = document.getElementById("submitButton")
+          document.getElementById("NextDiv").style.display = "none";
+
+
 
           checked = true;
 
 
             // Single array containing all answers
-            var answer = [document.getElementById("nomem").value,nodes[0].code,nodes[0].age,nodes[0].q1,(nodes.length > 1) ? nodes[1].name : "", (nodes.length > 1) ? nodes[1].q2 : "",(nodes.length > 1) ? nodes[1].friendsWith : "",(nodes.length > 2) ? nodes[2].name : "",(nodes.length > 2) ? nodes[2].q2 : "",(nodes.length > 2) ? nodes[2].friendsWith : "",(nodes.length > 3) ? nodes[3].name : "",(nodes.length > 3) ? nodes[3].q2 : "",(nodes.length > 3) ? nodes[3].friendsWith : "",(nodes.length > 4) ? nodes[4].name : "",(nodes.length > 4) ? nodes[4].q2 : "",(nodes.length > 4) ? nodes[4].friendsWith : "",(nodes.length > 5) ? nodes[5].name : "",(nodes.length > 5) ? nodes[5].q2 : "",(nodes.length > 5) ? nodes[5].friendsWith : "",(nodes.length > 6) ? nodes[6].name : "",(nodes.length > 6) ? nodes[6].q2 : "",(nodes.length > 6) ? nodes[6].friendsWith : "",(nodes.length > 7) ? nodes[7].name : "",(nodes.length > 7) ? nodes[7].q2 : "",(nodes.length > 7) ? nodes[7].friendsWith : "",(nodes.length > 8) ? nodes[8].name : "",(nodes.length > 8) ? nodes[8].q2 : "",(nodes.length > 8) ? nodes[8].friendsWith : "",(nodes.length > 9) ? nodes[9].name : "",(nodes.length > 9) ? nodes[9].q2 : "",(nodes.length > 9) ? nodes[9].friendsWith : "",(nodes.length > 10) ? nodes[10].name : "",(nodes.length > 10) ? nodes[10].q2 : "",(nodes.length > 10) ? nodes[10].friendsWith : "",(nodes.length > 11) ? nodes[11].name : "",(nodes.length > 11) ? nodes[11].q2 : "",(nodes.length > 11) ? nodes[11].friendsWith : "",(nodes.length > 12) ? nodes[12].name : "",(nodes.length > 12) ? nodes[12].q2 : "",(nodes.length > 12) ? nodes[12].friendsWith : "",(nodes.length > 13) ? nodes[13].name : "",(nodes.length > 13) ? nodes[13].q2 : "",(nodes.length > 13) ? nodes[13].friendsWith : "",(nodes.length > 14) ? nodes[14].name : "",(nodes.length > 14) ? nodes[14].q2 : "",(nodes.length > 14) ? nodes[14].friendsWith : "",(nodes.length > 15) ? nodes[15].name : "",(nodes.length > 15) ? nodes[15].q2 : "",(nodes.length>15)?nodes[15].friendsWith:"",nodes[0].q5,nodes[0].q6,nodes[0].q7,nodes[0].q8,nodes[0].q9,nodes[0].q10,nodes[0].q11,nodes[0].q12,nodes[0].q13,nodes[0].q14,nodes[0].q15,nodes[0].q16,nodes[0].q17,nodes[0].q18,nodes[0].q19,nodes[0].q20,nodes[0].q21,nodes[0].q22,nodes[0].q23,nodes[0].q24,nodes[0].q25,nodes[0].q26,nodes[0].q27,nodes[0].q28,nodes[0].q29,nodes[0].q30,nodes[0].q31,nodes[0].q32,nodes[0].q33,nodes[0].q34,nodes[0].q35,nodes[0].q36,nodes[0].q37,nodes[0].q38,nodes[0].q39,nodes[0].q40];
+            var answer = [document.getElementById("nomem").value,nodes[0].code,nodes[0].age,nodes[0].q1,(nodes.length > 1) ? nodes[1].name : "", (nodes.length > 1) ? nodes[1].q2 : "",(nodes.length > 1) ? nodes[1].friendsWith : "",(nodes.length > 2) ? nodes[2].name : "",(nodes.length > 2) ? nodes[2].q2 : "",(nodes.length > 2) ? nodes[2].friendsWith : "",(nodes.length > 3) ? nodes[3].name : "",(nodes.length > 3) ? nodes[3].q2 : "",(nodes.length > 3) ? nodes[3].friendsWith : "",(nodes.length > 4) ? nodes[4].name : "",(nodes.length > 4) ? nodes[4].q2 : "",(nodes.length > 4) ? nodes[4].friendsWith : "",(nodes.length > 5) ? nodes[5].name : "",(nodes.length > 5) ? nodes[5].q2 : "",(nodes.length > 5) ? nodes[5].friendsWith : "",(nodes.length > 6) ? nodes[6].name : "",(nodes.length > 6) ? nodes[6].q2 : "",(nodes.length > 6) ? nodes[6].friendsWith : "",(nodes.length > 7) ? nodes[7].name : "",(nodes.length > 7) ? nodes[7].q2 : "",(nodes.length > 7) ? nodes[7].friendsWith : "",(nodes.length > 8) ? nodes[8].name : "",(nodes.length > 8) ? nodes[8].q2 : "",(nodes.length > 8) ? nodes[8].friendsWith : "",(nodes.length > 9) ? nodes[9].name : "",(nodes.length > 9) ? nodes[9].q2 : "",(nodes.length > 9) ? nodes[9].friendsWith : "",(nodes.length > 10) ? nodes[10].name : "",(nodes.length > 10) ? nodes[10].q2 : "",(nodes.length > 10) ? nodes[10].friendsWith : "",nodes[0].q5,nodes[0].q6,nodes[0].q7,nodes[0].q8,nodes[0].q9,nodes[0].q10,nodes[0].q11,nodes[0].q12,nodes[0].q13,nodes[0].q14,nodes[0].q15,nodes[0].q16,nodes[0].q17,nodes[0].q18,nodes[0].q19,nodes[0].q20,nodes[0].q21,nodes[0].q22,nodes[0].q23,nodes[0].q24,nodes[0].q25,nodes[0].q26,nodes[0].q27,nodes[0].q28,nodes[0].q29,nodes[0].q30,nodes[0].q31,nodes[0].q32,nodes[0].q33,nodes[0].q34,nodes[0].q35,nodes[0].q36,nodes[0].q37,nodes[0].q38,nodes[0].q39,nodes[0].q40];
 
   console.log(answer)
 
@@ -2441,21 +2814,6 @@
             q2_10: (nodes.length > 10) ? nodes[10].name : "",
             q3_10: (nodes.length > 10) ? nodes[10].q2 : "",
             q4_10: (nodes.length > 10) ? nodes[10].friendsWith : "",
-            q2_11: (nodes.length > 11) ? nodes[11].name : "",
-            q3_11: (nodes.length > 11) ? nodes[11].q2 : "",
-            q4_11: (nodes.length > 11) ? nodes[11].friendsWith : "",
-            q2_12: (nodes.length > 12) ? nodes[12].name : "",
-            q3_12: (nodes.length > 12) ? nodes[12].q2 : "",
-            q4_12: (nodes.length > 12) ? nodes[12].friendsWith : "",
-            q2_13: (nodes.length > 13) ? nodes[13].name : "",
-            q3_13: (nodes.length > 13) ? nodes[13].q2 : "",
-            q4_13: (nodes.length > 13) ? nodes[13].friendsWith : "",
-            q2_14: (nodes.length > 14) ? nodes[14].name : "",
-            q3_14: (nodes.length > 14) ? nodes[14].q2 : "",
-            q4_14: (nodes.length > 14) ? nodes[14].friendsWith : "",
-            q2_15: (nodes.length > 15) ? nodes[15].name : "",
-            q3_15: (nodes.length > 15) ? nodes[15].q2 : "",
-            q4_15: (nodes.length > 15) ? nodes[15].friendsWith : "",
             q5: nodes[0].q5,
             q6: nodes[0].q6,
             q7: nodes[0].q7,
@@ -2495,27 +2853,33 @@
             });
 
             checked = false
-            lo20.style.display = "none";
 
-            var sf = document.getElementById("submitForm");
-            var sb = document.getElementById("submitButton");
-            var nd = document.getElementById("NextDiv");
-            sf.style.display = "block";
-            nd.style.display = "none";
-            var motivationText = d3.select("svg").append("text")
-              .attr("class", "slideText")
-              .attr("id", "motivationText")
-              .attr("x", center - (textWidth / 2) + 50)
-              .attr("y", text_offset_top + 40)
-              .text("Thank you for participating in this study. Click \"Next\" to end the survey.")
-              .call(wrap, textWidth);
 
-            // Release window close-prevention
-          }
-            unhook();
+            currSlide++;
+            showNext()
+
+        } else if (currSlide == 48) {
+              document.getElementById("submitButton").style.display = "none";
+              document.getElementById("submitForm").style.display = "none";
+              document.getElementById("slide9").style.display = "block";
+              document.getElementById('Next').style.display = "none";
+
+
+
+
+
+
+
+
+// Release window close-prevention
+
+              unhook();
         }
+
         $('#Next').blur();
+
       }
+
 
       // Detect Internet Explorer
       var ie = (function(){
@@ -2538,7 +2902,7 @@
 
     <div class="input-group" id="code_input" method="get" display="none" onsubmit ="return false;">
       <form id="CodeID">
-      <span class="slideText">Please enter a word that you will remember in case you wish to withdraw your data from this study.</span>
+      <span class="slideText">Please enter a word that you will remember in case you wish to withdraw your data from this study. (Make sure it is not your email or any identifiable information)</span>
         <input type="text" name="code" class="form-control" placeholder="..." size="10"><br><br>
       </form>
       </div>
@@ -2546,7 +2910,7 @@
 
     <div class="input-group" id="age_input" method="get" display="none" onsubmit = "return false;">
       <form id="AgeID">
-      <span class="slideText">Please state your age</span>
+      <span class="slideText">Please state your age (Years, in numbers)</span>
         <input type="text" name="age" class="form-control" placeholder="Age" size="10"><br><br>
         </form>
       </div>
@@ -2585,7 +2949,7 @@
 
     <div class="popop_box" id="fewFriends_box">
       <div class="popup_box" id="friendPopup">
-            <p class="popup_text">You have not entered 15 people. Are you sure that there is no one else with whom you discuss important matters? If so, please click ‘Next’ to continue. If there is someone else, please enter the name and click ‘add person’.</p>
+            <p class="popup_text">You have not entered 10 people. Are you sure that there is no one else with whom you discuss important matters? If so, please click ‘Next’ to continue. If there is someone else, please enter the name and click ‘add person’.</p>
             <button class="btn btn-default" onclick="closeFriendPopup()">Close</button>
       </div>
     </div>
@@ -2973,7 +3337,7 @@
 
     <div class="input-group" display="none" id="loneliness20" method="get">
       <form id="lo20user" display="none">
-        <span class="slideText">How often do you feel that people are around you but not with you?</span><br><br>
+        <span class="slideText">How often do you feel that there are people you can turn to?</span><br><br>
         <input type="radio" name="lo20" value="Always"><span class="questionText">  Always</span><br>
         <input type="radio" name="lo20" value="Sometimes"><span class="questionText">  Sometimes </span><br>
         <input type="radio" name="lo20" value="Rarely"><span class="questionText">  Rarely</span><br>
@@ -2989,7 +3353,7 @@
         <input type="hidden" name="<?php echo $_POST['statusvarname1']; ?>" value="<?php echo $_POST['statusvarvalue1']; ?>"/>
         <input type="hidden" name="<?php echo $_POST['varname1']; ?>" id="qu1_id" value=""/>
         <input type="hidden" id="nomem" name="nomem" value="<?php echo $_POST['nomem']; ?>"/>
-        <input name="<?php echo $_POST['nextvarname']; ?>" id="submitButton" class="btn btn-default" type="submit" value="Next"/>
+        <input name="<?php echo $_POST['nextvarname']; ?>" id="submitButton" class="btn btn-default" type="Next" value="Sumbit"/>
       </form>
     </div>
 
