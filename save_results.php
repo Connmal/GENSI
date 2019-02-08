@@ -5,6 +5,7 @@
       $_POST['nomem'],
       $_POST['code'],
       $_POST['age'],
+      $_POST['nation'],
       $_POST['q1'],
       $_POST['q2_1'],
       $_POST['q3_1'],

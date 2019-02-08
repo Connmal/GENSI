@@ -186,6 +186,10 @@ a {
   position: absolute;
   display: none;
 }
+#nation_input{
+  position: absolute;
+  display: none;
+}
 
 #socialselfesteem1{
   position: absolute;

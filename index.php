@@ -1481,12 +1481,31 @@
            document.getElementById("slide0").style.display = "none";
            document.getElementById("age_input").style.display = "none";
 
+           var ex = document.getElementById("nation_input");
+           ex.style.left = string_l + "px";
+           ex.style.top = string_t;
+           ex.style.display = "block";
+           currSlide+=.5;
 
+    } else if (currSlide == 3.5) {
+
+      if ($('input[name=nation]').val().length == 0 && checked == false && !skipped) {
+        promptNonresponse();
+        checked = true;
+      } else {
+        // Collect data before going on
+        if (!skipped) {
+          nodes[0].nation = $('input[name=nation]').val();
+        } else {
+          nodes[0].nation = "skipped";
+        }}
+
+           document.getElementById("nation_input").style.display = "none";
            var ex = document.getElementById("gender_input");
            ex.style.left = string_l + "px";
            ex.style.top = string_t;
            ex.style.display = "block";
-           currSlide++;
+           currSlide+=.5;
 
 
    } else if (currSlide == 4) {
@@ -2783,6 +2802,7 @@
             nomem: document.getElementById("nomem").value,
             code: nodes[0].code,
             age: nodes[0].age,
+            nation: nodes[0].nation,
             q1: nodes[0].q1,
             q2_1: (nodes.length > 1) ? nodes[1].name : "",
             q3_1: (nodes.length > 1) ? nodes[1].q2 : "",
@@ -2910,10 +2930,11 @@
 
     <div class="input-group" id="age_input" method="get" display="none" onsubmit = "return false;">
       <form id="AgeID">
-      <span class="slideText">Please state your age (Years, in numbers)</span>
-        <input type="text" name="age" class="form-control" placeholder="Age" size="10"><br><br>
+      <span class="slideText">Please state your age in years. Use a numerical value. (For example : 21)</span>
+        <input type="text" name="age" class="form-control" placeholder="" size="10"><br><br>
         </form>
       </div>
+
 
     </div>
     <div class="input-group" display="none" id="gender_input" method="get">
@@ -2926,6 +2947,13 @@
 
       </form>
     </div>
+
+    <div class="input-group" id="nation_input" method="get" display="none" onsubmit = "return false;">
+      <form id="nationID">
+      <span class="slideText">Please state your nationality. For example 'British, French, American etc...'</span>
+        <input type="text" name="nation" class="form-control" placeholder="..." size="10"><br><br>
+        </form>
+      </div>
 
   <div class="input-group" display="none" id="name_input" method="get" onsubmit="addFriend()">
       <input type="text" id="friendNameID" name="friendName" class="form-control" placeholder="Name" size="10">
