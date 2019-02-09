@@ -240,7 +240,7 @@
        .attr("class", "slideText")
        .attr("x", center - textWidth / 2)
        .attr("y", text_offset_top + title_offset_top + lineHeight * 32)
-       .text("No. It is up to you whether you would like to take part in the study.  I am giving you this information sheet to help you make that decision.  If you do decide to take part, remember that you can stop being involved in the study whenever you choose, without telling me why.  You are completely free to decide whether or not to take part, or to take part and then leave the study before completion.  If you no longer want to take part, simply close your browser window")
+       .text("No. It is up to you whether you would like to take part in the study.  I am giving you this information sheet to help you make that decision.  If you do decide to take part, remember that you can stop being involved in the study whenever you choose, without telling me why.  You are completely free to decide whether or not to take part, or to take part and then leave the study before completion.  If you no longer want to take part, simply close your browser window.")
        .call(wrap, textWidth);
       slide_1.append("text")
        .attr("class", "slideText")
@@ -252,7 +252,7 @@
       .attr("class", "slideText")
       .attr("x", center - textWidth / 2)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 44)
-      .text("You will be asked complete a survey that will last 20-30 minutes which consists of questions about your social network and your perceived emotional closeness to network members. You will also be asked to rate yourself on your personality, specifically how you rate in extroversion. And then finally you will be asked to rate yourself on several statements related to loneliness.")
+      .text("You will be asked complete a survey that will last 15-20 minutes which consists of questions about your social network and your perceived emotional closeness to network members. You will also be asked to rate yourself on your personality, specifically how you rate in extroversion. And then finally you will be asked to rate yourself on several statements related to loneliness.")
       .call(wrap, textWidth);
      slide_1.append("text")
       .attr("class", "slideText")
@@ -264,7 +264,7 @@
      .attr("class", "slideText")
      .attr("x", center - textWidth / 2)
      .attr("y", text_offset_top + title_offset_top + lineHeight * 54)
-     .text("Considering the nature of this research, participants may find questions about loneliness disconcerting and may feel uncomfortable answering such questions. However, the research will not gather and personal information about you such as your name, your email address or your IP. Any information given about your social network members will be anonymised during analysis and into randomly generated number codes. However, if you still feel uncomfortable about answering some of fields on this survey you are free to skip them or stop the survey at any time (simply close the browser). If you have completed the research already but have changed your mind on whether you wish to have your information used, you may send the code you inputted at the start of the survey to the researcher (email below) so you can withdraw your information. ")
+     .text("Considering the nature of this research, participants may find questions about loneliness disconcerting and may feel uncomfortable answering such questions. However, the research will not gather any personal information about you such as your name, your email address or your IP. Any information given about your social network members will be anonymised during analysis and into randomly generated number codes. However, if you still feel uncomfortable about answering some of fields on this survey you are free to skip them or stop the survey at any time (simply close the browser). If you have completed the research already but have changed your mind on whether you wish to have your information used, you may send the code you inputted at the start of the survey to the researcher (email below) so you can withdraw your information. ")
      .call(wrap, textWidth);
      slide_1.append("text")
      .attr("class", "slideText")
@@ -300,7 +300,7 @@
       .attr("class", "slideText")
       .attr("x", center - textWidth / 2)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 90)
-      .text("This research will be collection your age and gender. However, it will not gather any other personal information aside from information about your social network members that will be anonymised prior to analysis.")
+      .text("This research will be collect your age and gender. However, it will not gather any other personal information aside from information about your social network members that will be anonymised prior to analysis.")
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
@@ -348,7 +348,7 @@
       .attr("class", "slideText")
       .attr("x", center - textWidth / 2)
       .attr("y", text_offset_top + title_offset_top + lineHeight * 126)
-      .text("Northumbria University health and Life Sciences department")
+      .text("Northumbria University health and Life Sciences department.")
       .call(wrap, textWidth);
       slide_1.append("text")
       .attr("class", "slideText")
@@ -450,7 +450,7 @@
         .attr("id", "one_at_a_time")
         .attr("x", center - (textWidth / 2))
         .attr("y", text_offset_top + lineHeight * ($('#slide4 .slideText tspan').length + $('#slide4 .slideText').length-1))
-        .text("You can name up to 10 people with whom you discuss important matters. CLICK ON THEIR NAMES TO TOGGLE GENDER (As assigned at birth). Pink is female and teal is male.")
+        .text("You can name up to 10 people with whom you discuss important matters. CLICK ON THEIR NAMES TO TOGGLE GENDER . Pink is female and teal is male.")
         .call(wrap, textWidth);
       var textheight = $('#slide4 .slideText tspan').length + $('#slide4 .slideText').length;
       slide_4.append("text")
@@ -559,7 +559,7 @@
         .attr("class", "slideText")
         .attr("x", center - (textWidth / 2))
         .attr("y", text_offset_top + lineHeight * ($('#slide7 .slideText tspan').length + $('#slide7 .slideText').length-1))
-        .text("If you created an incorrect line by accident, you can remove it with a right click of your mouse.")
+        .text("If you created an incorrect line by accident, you can remove it with a right click of your mouse. (You can move the circles around to make it easier to visualise.)")
         .call(wrap, textWidth);
       slide_7.style("display", "none");
 
@@ -637,32 +637,32 @@
           .attr("class", "slideText")
           .attr("x", center - textWidth / 2)
           .attr("y", text_offset_top + title_offset_top + lineHeight * 34)
-          .text("The data collected in this study may also be published in scientific journals or presented at conferences.  Information and data gathered during this research study will only be available to the research team identified in the information sheet. Should the research be presented or published in any form, all data will be anonymous (i.e. your personal information or data will not be identifiable). It will be hosted on the open science framework, should you")
+          .text("The data collected in this study may also be published in scientific journals or presented at conferences.  Information and data gathered during this research study will only be available to the research team identified in the information sheet. Should the research be presented or published in any form, all data will be anonymous (i.e. your personal information or data will not be identifiable). It will be hosted on the open science framework, Should you not want this, then please contact the researchers and request removal of your data. Note however, that at no point will your personal information or data be revealed. ")
           .call(wrap, textWidth);
         slide_9.append("text")
           .attr("class", "slideText")
           .attr("x", center - textWidth / 2)
-          .attr("y", text_offset_top + title_offset_top + lineHeight * 40)
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 42)
           .text("All information and data gathered during this research will be stored in line with the Data Protection Act and GDPR. The anonymised data might be stored indefinitely in order to comply with good scientific practice. Should you not want this, then please contact the researchers and request removal of your data. Note however, that at no point will your personal information or data be revealed. ")
           .call(wrap, textWidth);
         slide_9.append("text")
           .attr("class", "slideText")
           .attr("x", center - textWidth / 2)
-          .attr("y", text_offset_top + title_offset_top + lineHeight * 48)
-          .text("If you wish to receive feedback about the findings of this research study, then please contact the researcher at connor.malcolm@northumbria.ac.uk ")
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 50)
+          .text("If you wish to receive feedback about the findings of this research study, then please contact the researcher at connor.malcolm@northumbria.ac.uk.")
           .call(wrap, textWidth);
         slide_9.append("text")
           .attr("class", "slideText")
           .attr("x", center - textWidth / 2)
-          .attr("y", text_offset_top + title_offset_top + lineHeight * 52)
-          .text("This study and its protocol have received full ethical approval from Faculty of Health and Life Sciences Research Ethics Committee. If you require confirmation of this, or if you have any concerns or worries concerning this research, or if you wish to register a complaint, please contact the Chair of this Committee, santosh.vijaykumar@northumbria.ac.uk stating the title of the research project and the name of the researcher")
+          .attr("y", text_offset_top + title_offset_top + lineHeight * 54)
+          .text("This study and its protocol have received full ethical approval from Faculty of Health and Life Sciences Research Ethics Committee. If you require confirmation of this, or if you have any concerns or worries concerning this research, or if you wish to register a complaint, please contact the Chair of this Committee, santosh.vijaykumar@northumbria.ac.uk stating the title of the research project and the name of the researcher.")
           .call(wrap, textWidth);
         slide_9.style("display", "none");
         slide_9.append("text")
           .attr("class", "slideText")
           .attr("x", center - textWidth / 2)
           .attr("y", text_offset_top + title_offset_top + lineHeight * 60)
-          .text("Thank you for participating in this survey. You may now close the browser")
+          .text("Thank you for participating in this survey. You may now close the browser.")
           .call(wrap, textWidth);
         slide_9.style("display", "none");
 
@@ -1489,23 +1489,33 @@
 
     } else if (currSlide == 3.5) {
 
-      if ($('input[name=nation]').val().length == 0 && checked == false && !skipped) {
+      if ($('input[name=nation]:checked').length == 0 && checked == false) {
         promptNonresponse();
         checked = true;
-      } else {
-        // Collect data before going on
-        if (!skipped) {
-          nodes[0].nation = $('input[name=nation]').val();
-        } else {
-          nodes[0].nation = "skipped";
-        }}
+     } else {
+       //Collect data before going on
+       var nation = document.getElementById("nationuser")
+       if (nation[0].checked) {
+         nodes[0].nation = "British";
+       } else if (nation[1].checked) {
+          nodes[0].nation = "American";
+       } else if (nation[2].checked) {
+         nodes[0].nation = "Other";
+       } else if (nation[3].checked) {
+         nodes[0].nation = "Prefer_Not_To_Say";
+       }
+       checked = false;
+
 
            document.getElementById("nation_input").style.display = "none";
+
+
            var ex = document.getElementById("gender_input");
            ex.style.left = string_l + "px";
            ex.style.top = string_t;
            ex.style.display = "block";
            currSlide+=.5;
+         }
 
 
    } else if (currSlide == 4) {
@@ -2922,7 +2932,7 @@
 
     <div class="input-group" id="code_input" method="get" display="none" onsubmit ="return false;">
       <form id="CodeID">
-      <span class="slideText">Please enter a word that you will remember in case you wish to withdraw your data from this study. (Make sure it is not your email or any identifiable information)</span>
+      <span class="slideText">Please enter a word that you will remember in case you wish to withdraw your data from this study. (Make sure it is not your email or any other personally identifiable information)</span>
         <input type="text" name="code" class="form-control" placeholder="..." size="10"><br><br>
       </form>
       </div>
@@ -2948,12 +2958,17 @@
       </form>
     </div>
 
-    <div class="input-group" id="nation_input" method="get" display="none" onsubmit = "return false;">
-      <form id="nationID">
-      <span class="slideText">Please state your nationality. For example 'British, French, American etc...'</span>
-        <input type="text" name="nation" class="form-control" placeholder="..." size="10"><br><br>
-        </form>
-      </div>
+  </div>
+  <div class="input-group" display="none" id="nation_input" method="get">
+    <form id="nationuser" display="none">
+      <span class="slideText">Please select your nationality.</span><br><br>
+      <input type="radio" name="nation" value="British"><span class="questionText"> British</span><br>
+      <input type="radio" name="nation" value="American"><span class="questionText"> American </span><br>
+      <input type="radio" name="nation" value="Other"><span class="questionText"> Other</span><br>
+      <input type="radio" name="nation" value="Prefer_Not_To_Say"><span class="questionText"> Prefer Not To Say</span><br>
+
+    </form>
+  </div>
 
   <div class="input-group" display="none" id="name_input" method="get" onsubmit="addFriend()">
       <input type="text" id="friendNameID" name="friendName" class="form-control" placeholder="Name" size="10">
