@@ -3124,7 +3124,7 @@
 
     <div class="input-group" display="none" id="sociability3" method="get">
       <form id="so3user" display="none">
-        <span class="slideText">I prefer jobs that involve active social interction to those that involve working alone.</span><br><br>
+        <span class="slideText">I prefer jobs that involve active social interaction to those that involve working alone.</span><br><br>
         <input type="radio" name="so3" value="strongly_agree"><span class="questionText">  Strongly Agree</span><br>
         <input type="radio" name="so3" value="agree"><span class="questionText">  Agree </span><br>
         <input type="radio" name="so3" value="neither_agree_or_disagree"><span class="questionText">  Neither Agree or Disagree</span><br>
@@ -3157,7 +3157,7 @@
 
     <div class="input-group" display="none" id="liveliness2" method="get">
       <form id="li2user" display="none">
-        <span class="slideText">On most days, I feel cheerful and optomistic.</span><br><br>
+        <span class="slideText">On most days, I feel cheerful and optimistic.</span><br><br>
         <input type="radio" name="li2" value="strongly_agree"><span class="questionText">  Strongly Agree</span><br>
         <input type="radio" name="li2" value="agree"><span class="questionText">  Agree </span><br>
         <input type="radio" name="li2" value="neither_agree_or_disagree"><span class="questionText">  Neither Agree or Disagree</span><br>
